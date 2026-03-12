@@ -115,9 +115,9 @@ export function Footer() {
             © {new Date().getFullYear()} Arizona Women Specialists. All rights reserved.
           </p>
           <div className="flex gap-8 text-sm text-muted-foreground">
-            <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link>
-            <Link href="#" className="hover:text-primary transition-colors">HIPAA Compliance</Link>
+            <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/terms-conditions" className="hover:text-primary transition-colors">Terms & Conditions</Link>
+            <Link href="/privacy-policy#hipaa-compliance" className="hover:text-primary transition-colors">HIPAA Compliance</Link>
           </div>
         </div>
       </div>

@@ -71,47 +71,47 @@ export default function SettingsPage() {
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-3">
-                <label className="text-sm font-bold text-accent px-2">Clinic Name</label>
+                <label className="text-sm font-bold text-teal-dark px-2">Clinic Name</label>
                 <Input 
                   value={settings.clinicName}
                   onChange={(e) => setSettings({...settings, clinicName: e.target.value})}
-                  className="py-7 px-6 rounded-full border-primary/10 focus:ring-primary medical-shadow"
+                  className="py-7 px-6 rounded-full border-primary/10 focus:ring-teal medical-shadow"
                 />
               </div>
               <div className="space-y-3">
-                <label className="text-sm font-bold text-accent px-2">Phone Number</label>
+                <label className="text-sm font-bold text-teal-dark px-2">Phone Number</label>
                 <Input 
                   value={settings.phoneNumber}
                   onChange={(e) => setSettings({...settings, phoneNumber: e.target.value})}
-                  className="py-7 px-6 rounded-full border-primary/10 focus:ring-primary medical-shadow"
+                  className="py-7 px-6 rounded-full border-primary/10 focus:ring-teal medical-shadow"
                 />
               </div>
               <div className="space-y-3">
-                <label className="text-sm font-bold text-accent px-2">Email Address</label>
+                <label className="text-sm font-bold text-teal-dark px-2">Email Address</label>
                 <Input 
                   type="email"
                   value={settings.email}
                   onChange={(e) => setSettings({...settings, email: e.target.value})}
-                  className="py-7 px-6 rounded-full border-primary/10 focus:ring-primary medical-shadow"
+                  className="py-7 px-6 rounded-full border-primary/10 focus:ring-teal medical-shadow"
                 />
               </div>
             </div>
 
             <div className="space-y-6">
               <div className="space-y-3">
-                <label className="text-sm font-bold text-accent px-2">Phoenix Office Address</label>
+                <label className="text-sm font-bold text-teal-dark px-2">Phoenix Office Address</label>
                 <Input 
                   value={settings.addressPhoenix}
                   onChange={(e) => setSettings({...settings, addressPhoenix: e.target.value})}
-                  className="py-7 px-6 rounded-full border-primary/10 focus:ring-primary medical-shadow"
+                  className="py-7 px-6 rounded-full border-primary/10 focus:ring-teal medical-shadow"
                 />
               </div>
               <div className="space-y-3">
-                <label className="text-sm font-bold text-accent px-2">Glendale Office Address</label>
+                <label className="text-sm font-bold text-teal-dark px-2">Glendale Office Address</label>
                 <Input 
                   value={settings.addressGlendale}
                   onChange={(e) => setSettings({...settings, addressGlendale: e.target.value})}
-                  className="py-7 px-6 rounded-full border-primary/10 focus:ring-primary medical-shadow"
+                  className="py-7 px-6 rounded-full border-primary/10 focus:ring-teal medical-shadow"
                 />
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function SettingsPage() {
 
             <Button 
               disabled={saving}
-              className="w-full bg-primary hover:bg-primary/90 rounded-full py-10 text-2xl font-bold shadow-2xl shadow-primary/20 group mt-4"
+              className="w-full bg-teal hover:bg-teal-dark rounded-full py-10 text-2xl font-bold shadow-2xl shadow-teal/20 group mt-4"
             >
               {saving ? <Loader2 className="h-8 w-8 animate-spin" /> : (
                 <>

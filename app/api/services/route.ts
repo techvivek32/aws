@@ -7,7 +7,9 @@ export async function GET() {
   try {
     await connectDB();
     const services = await Service.find().sort({ createdAt: -1 });
-    return NextResponse.json(services);
+    // Filter out Obstetrics service
+    const filteredServices = services.filter(s => s.title !== 'Obstetrics' && s.slug !== 'obstetrics');
+    return NextResponse.json(filteredServices);
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch services' }, { status: 500 });
   }

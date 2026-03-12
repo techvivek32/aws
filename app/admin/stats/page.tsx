@@ -68,23 +68,23 @@ export default function StatsPage() {
         <CardContent className="p-10">
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="space-y-3">
-              <label className="text-lg font-bold text-accent px-2">Happy Patients Count</label>
+              <label className="text-lg font-bold text-teal-dark px-2">Happy Patients Count</label>
               <Input 
                 type="number"
                 value={stats.happyPatients}
                 onChange={(e) => setStats({...stats, happyPatients: parseInt(e.target.value)})}
-                className="py-8 px-8 rounded-full text-xl border-primary/10 focus:ring-primary medical-shadow"
+                className="py-8 px-8 rounded-full text-xl border-primary/10 focus:ring-teal medical-shadow"
               />
               <p className="text-sm text-muted-foreground px-4 italic">The total number of patients served (e.g., 5000)</p>
             </div>
 
             <div className="space-y-3">
-              <label className="text-lg font-bold text-accent px-2">Years of Experience</label>
+              <label className="text-lg font-bold text-teal-dark px-2">Years of Experience</label>
               <Input 
                 type="number"
                 value={stats.yearsExperience}
                 onChange={(e) => setStats({...stats, yearsExperience: parseInt(e.target.value)})}
-                className="py-8 px-8 rounded-full text-xl border-primary/10 focus:ring-primary medical-shadow"
+                className="py-8 px-8 rounded-full text-xl border-primary/10 focus:ring-teal medical-shadow"
               />
               <p className="text-sm text-muted-foreground px-4 italic">Total years the clinic has been serving the community</p>
             </div>
@@ -95,9 +95,9 @@ export default function StatsPage() {
                 id="sameDay"
                 checked={stats.sameDayAppointments}
                 onChange={(e) => setStats({...stats, sameDayAppointments: e.target.checked})}
-                className="h-6 w-6 rounded-md border-primary text-primary focus:ring-primary cursor-pointer"
+                className="h-6 w-6 rounded-md border-teal text-primary focus:ring-teal cursor-pointer"
               />
-              <label htmlFor="sameDay" className="text-lg font-bold text-accent cursor-pointer">
+              <label htmlFor="sameDay" className="text-lg font-bold text-teal-dark cursor-pointer">
                 Enable "Same-Day Appointments" badge
               </label>
             </div>
@@ -110,7 +110,7 @@ export default function StatsPage() {
 
             <Button 
               disabled={saving}
-              className="w-full bg-primary hover:bg-primary/90 rounded-full py-10 text-2xl font-bold shadow-2xl shadow-primary/20 group"
+              className="w-full bg-teal hover:bg-teal-dark rounded-full py-10 text-2xl font-bold shadow-2xl shadow-teal/20 group"
             >
               {saving ? <Loader2 className="h-8 w-8 animate-spin" /> : (
                 <>

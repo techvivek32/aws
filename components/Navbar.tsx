@@ -44,59 +44,81 @@ export function Navbar() {
   const phone = settings?.phoneNumber || '(623) 846-7597'
 
   return (
-    <header className="sticky-header">
-      <div className="container flex h-20 items-center justify-between">
-        <div className="flex items-center gap-8">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold tracking-tighter text-primary uppercase">
-              {settings?.clinicName?.split(' ')[0] || 'Arizona'} <span className="text-foreground"> WOMEN SPECIALISTS</span>
-            </span>
+    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur-md">
+      <div className="container flex h-28 items-center justify-between">
+        <div className="flex items-center gap-12">
+          <Link href="/" className="flex items-center gap-4 group">
+            <div className="relative h-16 w-12 flex items-center justify-center">
+              {/* Simplified Female Silhouette Icon matching the logo */}
+              <svg viewBox="0 0 100 200" className="h-full w-full text-primary fill-none stroke-current stroke-[4]" strokeLinecap="round">
+                <circle cx="50" cy="30" r="15" />
+                <path d="M50 45 C30 45 20 70 20 100 C20 150 40 180 50 190 C60 180 80 150 80 100 C80 70 70 45 50 45 Z" />
+                <path d="M30 70 C40 65 60 65 70 70" />
+              </svg>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-2xl md:text-3xl font-light tracking-tight text-[#b03a7e] font-serif leading-none mb-1">
+                Arizona Women <span className="font-normal">Specialists</span>
+              </span>
+              <span className="text-[10px] font-black tracking-[0.4em] text-teal-dark uppercase border-t border-accent-foreground/10 pt-1">
+                GYNECOLOGY & WOMEN'S CARE
+              </span>
+            </div>
           </Link>
 
-          <NavigationMenu className="hidden md:flex">
-            <NavigationMenuList className="gap-2">
+          <NavigationMenu className="hidden lg:flex">
+            <NavigationMenuList className="gap-1">
               <NavigationMenuItem>
-                <Link href="/" className={cn(navigationMenuTriggerStyle(), pathname === "/" && "text-primary font-semibold")}>
+                <Link href="/" className={cn(navigationMenuTriggerStyle(), "text-primary font-black uppercase tracking-widest text-xs hover:text-[#b03a7e] transition-colors", pathname === "/" && "text-[#b03a7e]")}>
                   Home
                 </Link>
               </NavigationMenuItem>
+              
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={cn(pathname.startsWith("/services") && "text-primary font-semibold")}>
-                  Services
-                </NavigationMenuTrigger>
+                <NavigationMenuTrigger className={cn("text-primary font-black uppercase tracking-widest text-xs hover:text-[#b03a7e] transition-colors", pathname.startsWith("/services") && "text-[#b03a7e]")}>Services</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] min-h-[100px]">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] min-h-[100px] bg-white">
                     {services.length > 0 ? services.map((service) => (
-                      <ListItem
-                        key={service._id}
-                        title={service.title}
-                        href={`/services/${service.slug}`}
-                      >
-                        {service.description}
-                      </ListItem>
+                      <li key={service._id}>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href={`/services/${service.slug}`}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal/5 hover:text-teal-dark"
+                          >
+                            <div className="text-sm font-black leading-none text-teal-dark">{service.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-teal-dark/70 font-medium">
+                              {service.description}
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
                     )) : (
                       <div className="p-4 text-muted-foreground text-sm font-medium">Loading services...</div>
                     )}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
-                <Link href="/weight-loss" className={cn(navigationMenuTriggerStyle(), pathname === "/weight-loss" && "text-primary font-semibold")}>
+                <Link href="/weight-loss" className={cn(navigationMenuTriggerStyle(), "text-primary font-black uppercase tracking-widest text-xs hover:text-[#b03a7e] transition-colors", pathname === "/weight-loss" && "text-[#b03a7e]")}>
                   Weight Loss
                 </Link>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
-                <Link href="/cash-pay" className={cn(navigationMenuTriggerStyle(), pathname === "/cash-pay" && "text-primary font-semibold")}>
+                <Link href="/cash-pay" className={cn(navigationMenuTriggerStyle(), "text-primary font-black uppercase tracking-widest text-xs hover:text-[#b03a7e] transition-colors", pathname === "/cash-pay" && "text-[#b03a7e]")}>
                   Pricing
                 </Link>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
-                <Link href="/blog" className={cn(navigationMenuTriggerStyle(), pathname === "/blog" && "text-primary font-semibold")}>
+                <Link href="/blog" className={cn(navigationMenuTriggerStyle(), "text-primary font-black uppercase tracking-widest text-xs hover:text-[#b03a7e] transition-colors", pathname === "/blog" && "text-[#b03a7e]")}>
                   Blog
                 </Link>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
-                <Link href="/contact" className={cn(navigationMenuTriggerStyle(), pathname === "/contact" && "text-primary font-semibold")}>
+                <Link href="/contact" className={cn(navigationMenuTriggerStyle(), "text-primary font-black uppercase tracking-widest text-xs hover:text-[#b03a7e] transition-colors", pathname === "/contact" && "text-[#b03a7e]")}>
                   Contact
                 </Link>
               </NavigationMenuItem>
@@ -106,18 +128,19 @@ export function Navbar() {
 
         <div className="flex items-center gap-6">
           <div className="hidden lg:flex items-center gap-2 text-foreground font-bold text-lg whitespace-nowrap">
-            <Phone className="h-5 w-5 text-primary" />
+            <Phone className="h-5 w-5 text-teal" />
             <a href={`tel:${phone.replace(/\D/g, '')}`} className="hover:text-primary transition-colors">
               {phone}
             </a>
           </div>
-          <Button className="hidden sm:flex bg-primary hover:bg-primary/90 rounded-full px-8 py-6 text-lg font-bold shadow-lg shadow-primary/20" asChild>
-            <a href="#book-appointment">Book Appointment</a>
+          <Button className="hidden sm:flex bg-teal hover:bg-teal-dark rounded-full px-8 py-6 text-lg font-bold shadow-lg shadow-teal/20" asChild>
+            <a href="#book-appointment">Book Now</a>
           </Button>
           
           <button 
-            className="md:hidden p-2 text-accent"
+            className="lg:hidden p-2 text-teal-dark"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close Menu" : "Open Menu"}
           >
             {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
           </button>
@@ -129,28 +152,28 @@ export function Navbar() {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-border p-8 z-50 flex flex-col gap-6 medical-shadow"
+          className="lg:hidden absolute top-full left-0 w-full bg-white border-b border-border p-8 z-50 flex flex-col gap-6 medical-shadow"
         >
           <nav className="flex flex-col gap-6">
-            <Link href="/" className="text-xl font-bold text-accent" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link href="/" className="text-xl font-bold text-teal-dark" onClick={() => setIsOpen(false)}>Home</Link>
             <div className="flex flex-col gap-4">
-              <span className="text-xl font-bold text-primary">Services</span>
+              <span className="text-xl font-bold text-teal">Services</span>
               {services.map(s => (
                 <Link key={s.title} href={`/services/${s.slug}`} className="text-lg font-medium text-muted-foreground pl-4" onClick={() => setIsOpen(false)}>{s.title}</Link>
               ))}
             </div>
-            <Link href="/weight-loss" className="text-xl font-bold text-accent" onClick={() => setIsOpen(false)}>Weight Loss</Link>
-            <Link href="/cash-pay" className="text-xl font-bold text-accent" onClick={() => setIsOpen(false)}>Pricing</Link>
-            <Link href="/blog" className="text-xl font-bold text-accent" onClick={() => setIsOpen(false)}>Blog</Link>
-            <Link href="/contact" className="text-xl font-bold text-accent" onClick={() => setIsOpen(false)}>Contact</Link>
+            <Link href="/weight-loss" className="text-xl font-bold text-teal-dark" onClick={() => setIsOpen(false)}>Weight Loss</Link>
+            <Link href="/cash-pay" className="text-xl font-bold text-teal-dark" onClick={() => setIsOpen(false)}>Pricing</Link>
+            <Link href="/blog" className="text-xl font-bold text-teal-dark" onClick={() => setIsOpen(false)}>Blog</Link>
+            <Link href="/contact" className="text-xl font-bold text-teal-dark" onClick={() => setIsOpen(false)}>Contact</Link>
           </nav>
           <div className="pt-6 border-t border-border flex flex-col gap-4">
-            <div className="flex items-center gap-3 text-lg font-bold text-accent">
-              <Phone className="h-6 w-6 text-primary" />
+            <div className="flex items-center gap-3 text-lg font-bold text-teal-dark">
+              <Phone className="h-6 w-6 text-teal" />
               <a href={`tel:${phone.replace(/\D/g, '')}`}>{phone}</a>
             </div>
-            <Button className="w-full bg-primary rounded-full py-7 text-xl font-bold" asChild onClick={() => setIsOpen(false)}>
-              <a href="#book-appointment">Book Appointment</a>
+            <Button className="w-full bg-teal rounded-full py-7 text-xl font-bold" asChild onClick={() => setIsOpen(false)}>
+              <a href="#book-appointment">Book Now</a>
             </Button>
           </div>
         </motion.div>
@@ -169,13 +192,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-teal-dark focus:bg-accent focus:text-teal-dark",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <p className="line-clamp-2 text-sm leading-snug text-teal-dark/70">
             {children}
           </p>
         </a>

@@ -42,7 +42,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   if (status === "loading") {
     return (
       <div className="min-h-screen flex items-center justify-center bg-secondary/30">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal"></div>
       </div>
     )
   }
@@ -79,8 +79,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               className={cn(
                 "flex items-center gap-4 p-4 rounded-2xl transition-all font-bold",
                 pathname === item.href 
-                  ? "bg-primary text-white shadow-lg shadow-primary/20" 
-                  : "text-muted-foreground hover:bg-secondary hover:text-accent"
+                  ? "bg-teal text-white shadow-lg shadow-teal/20" 
+                  : "text-muted-foreground hover:bg-secondary hover:text-teal-dark"
               )}
             >
               <item.icon className="h-6 w-6 shrink-0" />
@@ -106,12 +106,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Main Content */}
       <main className="flex-1 overflow-auto">
         <header className="h-20 bg-white border-b border-border flex items-center justify-between px-10 sticky top-0 z-40">
-          <h1 className="text-2xl font-black text-accent">
+          <h1 className="text-2xl font-black text-teal-dark">
             {navItems.find(item => item.href === pathname)?.name || "Dashboard"}
           </h1>
           <div className="flex items-center gap-4">
             <div className="text-right hidden sm:block">
-              <p className="text-sm font-bold text-accent">{session.user?.name}</p>
+              <p className="text-sm font-bold text-teal-dark">{session.user?.name}</p>
               <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Administrator</p>
             </div>
             <div className="h-12 w-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center font-bold">

@@ -27,7 +27,7 @@ export default function TermsConditionsPage() {
             <h2 className="text-2xl font-bold mb-4">Medical Services</h2>
             <h3 className="text-xl font-semibold mb-3">Healthcare Provider Relationship</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Arizona Women Specialists provides obstetrics, gynecology, and medical weight loss services. By becoming a patient, you establish a healthcare provider-patient relationship governed by professional medical standards and applicable laws.
+              Arizona Women Specialists provides women's care, gynecology, and medical weight loss services. By becoming a patient, you establish a healthcare provider-patient relationship governed by professional medical standards and applicable laws.
             </p>
             
             <h3 className="text-xl font-semibold mb-3">Not Emergency Services</h3>
@@ -36,7 +36,7 @@ export default function TermsConditionsPage() {
             </p>
 
             <h3 className="text-xl font-semibold mb-3">Appointment Policy</h3>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li>Appointments must be scheduled in advance</li>
               <li>Please arrive 15 minutes early for new patient appointments</li>
               <li>Cancellations must be made at least 24 hours in advance</li>
@@ -49,9 +49,9 @@ export default function TermsConditionsPage() {
             <h2 className="text-2xl font-bold mb-4">Weight Loss Program Terms</h2>
             <h3 className="text-xl font-semibold mb-3">Medical Supervision Required</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Our medical weight loss programs, including GLP-1 medications (Ozempic, Wegovy, Mounjaro, Zepbound, compounded semaglutide/tirzepatide) and other treatments, require medical supervision. Participation requires:
+              Our medical weight loss programs, including GLP-1 medications (compounded semaglutide/tirzepatide) and other treatments, require medical supervision. Participation requires:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li>Initial medical evaluation and consultation</li>
               <li>Regular follow-up appointments as prescribed</li>
               <li>Compliance with treatment protocols</li>
@@ -76,7 +76,7 @@ export default function TermsConditionsPage() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               You are responsible for payment of all services rendered. We accept various payment methods including:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li>Insurance (we will verify coverage but you are ultimately responsible)</li>
               <li>Cash pay options (see our cash pay pricing page)</li>
               <li>Credit and debit cards</li>
@@ -100,7 +100,7 @@ export default function TermsConditionsPage() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               You agree to use our website only for lawful purposes. You may not:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li>Attempt to gain unauthorized access to our systems</li>
               <li>Interfere with the proper functioning of the website</li>
               <li>Use automated systems to access the website without permission</li>
@@ -132,7 +132,7 @@ export default function TermsConditionsPage() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               If we offer telehealth services, the following applies:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li>You must be located in Arizona at the time of the telehealth visit</li>
               <li>You are responsible for ensuring a private, secure location for the visit</li>
               <li>Technical issues may require rescheduling</li>
@@ -196,7 +196,7 @@ export default function TermsConditionsPage() {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 For questions about these Terms & Conditions:
               </p>
-              <div className="space-y-2 text-muted-foreground">
+              <div className="space-y-2 text-teal-dark/70">
                 <p><strong>Arizona Women Specialists</strong></p>
                 <p>Phoenix Office: 4700 N 51st Ave Suite 5, Phoenix, AZ 85031</p>
                 <p>Glendale Office: 18699 N 67th Ave Suite 320, Glendale, AZ 85308</p>
@@ -214,7 +214,7 @@ export default function TermsConditionsPage() {
           </section>
 
           <section className="mt-12 pt-8 border-t">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-teal-dark/70">
               <Link href="/" className="text-primary hover:underline">Return to Home</Link> | <Link href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>
             </p>
           </section>

@@ -4,11 +4,11 @@ export function SchemaMarkup() {
     "@type": "MedicalClinic",
     "name": "Arizona Women Specialists",
     "alternateName": "AZ Women Specialists",
-    "description": "Expert obstetrics, gynecology, and medical weight loss services in Phoenix and Glendale, AZ.",
+    "description": "Expert women's care, gynecology, and medical weight loss services in Phoenix and Glendale, AZ.",
     "url": "https://www.arizonawomenspecialists.com",
     "telephone": "+16238467597",
     "medicalSpecialty": [
-      "ObstetricsAndGynecology",
+      "GynecologicServices",
       "MedicalWeightLoss"
     ],
     "address": [

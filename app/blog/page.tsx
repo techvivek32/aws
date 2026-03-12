@@ -50,7 +50,7 @@ export default function BlogPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-6xl md:text-8xl font-black text-accent mb-8 leading-[0.9] tracking-tighter italic">
+            <h1 className="text-6xl md:text-8xl font-black text-teal-dark mb-8 leading-[0.9] tracking-tighter italic">
               Medical <span className="text-primary underline decoration-primary/20 underline-offset-8">Insights</span> & Wellness
             </h1>
             <p className="text-xl md:text-3xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-medium">
@@ -70,7 +70,7 @@ export default function BlogPage() {
                   key={idx}
                   onClick={() => setSelectedCategory(cat)}
                   variant={selectedCategory === cat ? "default" : "outline"}
-                  className={`rounded-full px-8 py-7 text-lg font-bold transition-all ${selectedCategory === cat ? 'bg-primary hover:bg-primary/90' : 'border-primary/20 text-accent hover:border-primary hover:text-primary bg-white'}`}
+                  className={`rounded-full px-8 py-7 text-lg font-bold transition-all ${selectedCategory === cat ? 'bg-teal hover:bg-teal-dark' : 'border-primary/20 text-teal-dark hover:border-teal hover:text-primary bg-white'}`}
                 >
                   {cat}
                 </Button>
@@ -78,12 +78,12 @@ export default function BlogPage() {
             </div>
             
             <div className="relative w-full md:w-96">
-              <Search className="absolute left-6 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              <Search className="absolute left-6 top-1/2 -translate-y-1/2 h-5 w-5 text-teal-dark/70" />
               <Input 
                 placeholder="Search articles..." 
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-14 py-8 rounded-full text-lg border-primary/20 focus:ring-primary medical-shadow bg-white"
+                className="pl-14 py-8 rounded-full text-lg border-primary/20 focus:ring-teal medical-shadow bg-white"
               />
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function BlogPage() {
         <div className="container px-4">
           {loading ? (
             <div className="flex justify-center py-20">
-              <Loader2 className="h-12 w-12 animate-spin text-primary" />
+              <Loader2 className="h-12 w-12 animate-spin text-teal" />
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -114,7 +114,7 @@ export default function BlogPage() {
                       alt={post.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className="absolute top-8 left-8 bg-primary text-white text-xs font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full shadow-lg">
+                    <div className="absolute top-8 left-8 bg-teal text-white text-xs font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full shadow-lg">
                       {post.category}
                     </div>
                   </div>
@@ -122,16 +122,16 @@ export default function BlogPage() {
                   <div className="p-10 flex flex-col flex-1">
                     <div className="flex items-center gap-6 mb-8 text-sm text-muted-foreground font-black uppercase tracking-widest">
                       <div className="flex items-center gap-2">
-                        <Calendar className="h-4 w-4 text-primary" />
+                        <Calendar className="h-4 w-4 text-teal" />
                         {new Date(post.publishedAt).toLocaleDateString()}
                       </div>
                       <div className="flex items-center gap-2">
-                        <User className="h-4 w-4 text-primary" />
+                        <User className="h-4 w-4 text-teal" />
                         {post.author}
                       </div>
                     </div>
                     
-                    <h3 className="text-3xl font-black text-accent mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-[1.1] tracking-tight">
+                    <h3 className="text-3xl font-black text-teal-dark mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-[1.1] tracking-tight">
                       {post.title}
                     </h3>
                     
@@ -143,7 +143,7 @@ export default function BlogPage() {
                       <Button variant="ghost" className="p-0 text-primary font-bold text-xl hover:bg-transparent group/btn flex items-center gap-3" asChild>
                         <Link href={`/blog/${post.slug}`}>
                           Read Article
-                          <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center group-hover/btn:bg-primary group-hover/btn:text-white transition-all">
+                          <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center group-hover/btn:bg-teal group-hover/btn:text-white transition-all">
                             <ArrowRight className="h-5 w-5 transition-transform" />
                           </div>
                         </Link>
@@ -154,8 +154,8 @@ export default function BlogPage() {
               ))}
               {filteredPosts.length === 0 && (
                 <div className="col-span-full text-center py-20 bg-white rounded-[3rem] medical-shadow">
-                  <Search className="h-16 w-16 text-primary/20 mx-auto mb-6" />
-                  <h3 className="text-3xl font-black text-accent">No articles found</h3>
+                  <Search className="h-16 w-16 text-teal/20 mx-auto mb-6" />
+                  <h3 className="text-3xl font-black text-teal-dark">No articles found</h3>
                   <p className="text-xl text-muted-foreground font-medium mt-2">Try searching for something else or browse another category.</p>
                 </div>
               )}
@@ -168,16 +168,16 @@ export default function BlogPage() {
       <section className="py-24 bg-primary/5">
         <div className="container px-4">
           <div className="bg-white rounded-[4rem] p-12 lg:p-24 medical-shadow border border-primary/10 text-center flex flex-col items-center max-w-5xl mx-auto">
-            <h2 className="text-5xl md:text-7xl font-black text-accent mb-8 leading-tight tracking-tighter italic">Stay informed, <br /> <span className="text-primary underline decoration-primary/20 underline-offset-8">stay healthy</span>.</h2>
+            <h2 className="text-5xl md:text-7xl font-black text-teal-dark mb-8 leading-tight tracking-tighter italic">Stay informed, <br /> <span className="text-primary underline decoration-primary/20 underline-offset-8">stay healthy</span>.</h2>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl leading-relaxed font-medium">
               Subscribe to our monthly newsletter for the latest women's health tips, clinic updates, and wellness advice delivered to your inbox.
             </p>
             <form className="flex flex-col sm:flex-row gap-6 w-full max-w-2xl">
               <Input 
                 placeholder="Your email address" 
-                className="flex-1 py-8 px-10 rounded-full text-lg border-primary/20 focus:ring-primary medical-shadow bg-white"
+                className="flex-1 py-8 px-10 rounded-full text-lg border-primary/20 focus:ring-teal medical-shadow bg-white"
               />
-              <Button className="bg-primary hover:bg-primary/90 rounded-full py-8 px-12 text-xl font-bold shadow-2xl shadow-primary/30">
+              <Button className="bg-teal hover:bg-teal-dark rounded-full py-8 px-12 text-xl font-bold shadow-2xl shadow-teal/30">
                 Subscribe
               </Button>
             </form>

@@ -19,7 +19,7 @@ export function MobileCallButton() {
   return (
     <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-4 w-[90%] max-w-sm px-4">
       <Button 
-        className="flex-1 bg-primary text-white rounded-full py-7 shadow-2xl hover:bg-primary/90 flex items-center justify-center gap-3 text-lg font-bold border-2 border-white/20"
+        className="flex-1 bg-teal text-white rounded-full py-7 shadow-2xl hover:bg-teal-dark flex items-center justify-center gap-3 text-lg font-bold border-2 border-white/20"
         asChild
       >
         <a href={`tel:${phone.replace(/\D/g, '')}`}>
@@ -29,7 +29,7 @@ export function MobileCallButton() {
       </Button>
       <Button 
         variant="outline"
-        className="flex-1 bg-white text-primary border-primary rounded-full py-7 shadow-2xl hover:bg-primary/5 flex items-center justify-center gap-3 text-lg font-bold"
+        className="flex-1 bg-white text-primary border-teal rounded-full py-7 shadow-2xl hover:bg-primary/5 flex items-center justify-center gap-3 text-lg font-bold"
         asChild
       >
         <a href="#book-appointment">

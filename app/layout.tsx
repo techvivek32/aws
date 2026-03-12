@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { LoadPopup } from "@/components/LoadPopup";
 import { MobileCallButton } from "@/components/MobileCallButton";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
 import { cn } from "@/lib/utils";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     default: "Arizona Women Specialists | Expert OBGYN & Weight Loss",
     template: "%s | Arizona Women Specialists"
   },
-  description: "Personalized obstetrics, gynecology, and doctor-supervised medical weight loss programs in Phoenix and Glendale, AZ.",
+  description: "Personalized women's care, gynecology, and doctor-supervised medical weight loss programs in Phoenix and Glendale, AZ.",
   keywords: ["OBGYN Phoenix", "Women's Health Glendale", "Medical Weight Loss AZ", "Pregnancy Care Phoenix", "Gynecology Arizona"],
   openGraph: {
     type: "website",
@@ -49,6 +50,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={cn(inter.className, "antialiased")}>
         <AuthProvider>
+          <LoadPopup />
           <SchemaMarkup />
           <Navbar />
           <main className="min-h-screen">

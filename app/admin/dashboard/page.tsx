@@ -61,7 +61,7 @@ export default function DashboardPage() {
                 </div>
               </div>
               <p className="text-muted-foreground font-bold text-sm uppercase tracking-wider">{card.name}</p>
-              <h3 className="text-4xl font-black text-accent mt-2">{card.value}</h3>
+              <h3 className="text-4xl font-black text-teal-dark mt-2">{card.value}</h3>
             </CardContent>
           </Card>
         ))}
@@ -71,7 +71,7 @@ export default function DashboardPage() {
         <Card className="lg:col-span-2 rounded-[3rem] border-none medical-shadow">
           <CardHeader className="p-10 pb-0">
             <CardTitle className="text-2xl font-black flex items-center gap-3">
-              <Clock className="h-6 w-6 text-primary" />
+              <Clock className="h-6 w-6 text-teal" />
               Recent Appointments
             </CardTitle>
           </CardHeader>
@@ -84,7 +84,7 @@ export default function DashboardPage() {
                       {apt.name[0]}
                     </div>
                     <div>
-                      <h4 className="font-bold text-accent text-lg">{apt.name}</h4>
+                      <h4 className="font-bold text-teal-dark text-lg">{apt.name}</h4>
                       <p className="text-muted-foreground font-medium">{apt.service} • {new Date(apt.createdAt).toLocaleDateString()}</p>
                     </div>
                   </div>
@@ -107,7 +107,7 @@ export default function DashboardPage() {
             <CardTitle className="text-2xl font-black italic">Quick Actions</CardTitle>
           </CardHeader>
           <CardContent className="p-10 pt-0 space-y-4">
-            <button className="w-full bg-primary hover:bg-primary/90 text-white rounded-2xl py-5 font-bold transition-all">Add New Service</button>
+            <button className="w-full bg-teal hover:bg-teal-dark text-white rounded-2xl py-5 font-bold transition-all">Add New Service</button>
             <button className="w-full bg-white/10 hover:bg-white/20 text-white rounded-2xl py-5 font-bold transition-all border border-white/10">Write Blog Post</button>
             <button className="w-full bg-white/10 hover:bg-white/20 text-white rounded-2xl py-5 font-bold transition-all border border-white/10">Update Site Stats</button>
           </CardContent>

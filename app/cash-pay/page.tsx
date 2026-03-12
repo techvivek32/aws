@@ -12,7 +12,8 @@ import {
   Stethoscope,
   Image as ImageIcon,
   Heart,
-  ArrowRight
+  ArrowRight,
+  Activity
 } from "lucide-react"
 
 const pricingCategories = [
@@ -22,6 +23,14 @@ const pricingCategories = [
     items: [
       { name: "New Patient Visit", price: "$100", description: "Comprehensive initial consultation and exam." },
       { name: "Established Patient Visit", price: "$75", description: "Follow-up care and routine monitoring." },
+    ]
+  },
+  {
+    title: "Medical Weight Loss",
+    icon: Activity,
+    items: [
+      { name: "First Month Program", price: "$100", description: "Initial consultation, medication, and supplies." },
+      { name: "3-Month Program", price: "$500", description: "Complete first quarter with physician supervision." },
     ]
   },
   {
@@ -45,16 +54,16 @@ const pricingCategories = [
 
 export default function CashPayPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-6">
       {/* Hero Section */}
-      <section className="bg-secondary/30 py-24 relative overflow-hidden">
+      <section className="bg-secondary/30 py-16 relative overflow-hidden">
         <div className="container px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-accent mb-8 leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-teal-dark mb-8 leading-tight tracking-tight">
               Transparent <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Cash Pay Pricing</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -67,7 +76,7 @@ export default function CashPayPage() {
       {/* Pricing Grid */}
       <section className="py-24">
         <div className="container px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {pricingCategories.map((category, idx) => (
               <motion.div
                 key={idx}
@@ -77,18 +86,18 @@ export default function CashPayPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-[3rem] p-10 medical-shadow border border-primary/5 flex flex-col h-full"
               >
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8">
+                <div className="w-14 h-14 rounded-2xl bg-teal/10 text-teal flex items-center justify-center mb-8">
                   <category.icon className="h-7 w-7" />
                 </div>
                 
-                <h2 className="text-3xl font-bold text-accent mb-8">{category.title}</h2>
+                <h2 className="text-3xl font-bold text-teal-dark mb-8">{category.title}</h2>
                 
                 <div className="flex flex-col gap-8 flex-1">
                   {category.items.map((item, iIdx) => (
                     <div key={iIdx} className="flex flex-col gap-2 pb-6 border-b border-secondary/50 last:border-0 last:pb-0">
                       <div className="flex justify-between items-center">
-                        <h3 className="text-xl font-bold text-accent">{item.name}</h3>
-                        <span className="text-2xl font-black text-primary">{item.price}</span>
+                        <h3 className="text-xl font-bold text-teal-dark">{item.name}</h3>
+                        <span className="text-2xl font-black text-teal">{item.price}</span>
                       </div>
                       <p className="text-muted-foreground leading-relaxed">
                         {item.description}
@@ -107,7 +116,7 @@ export default function CashPayPage() {
                 Our team is happy to provide pricing for other services, procedures, and laboratory tests over the phone. We believe in financial transparency for all our patients.
               </p>
             </div>
-            <Button className="bg-primary hover:bg-primary/90 rounded-full py-8 px-12 text-xl font-bold border-none w-full lg:w-auto" asChild>
+            <Button className="bg-teal hover:bg-teal-dark rounded-full py-8 px-12 text-xl font-bold border-none w-full lg:w-auto" asChild>
               <a href="tel:6238467597">
                 Call (623) 846-7597
               </a>
@@ -127,10 +136,10 @@ export default function CashPayPage() {
               { icon: Calendar, title: "Same-Day Pay", text: "Payment is collected at the time of service for your convenience." },
             ].map((point, idx) => (
               <div key={idx} className="flex flex-col items-center text-center gap-4">
-                <div className="h-16 w-16 rounded-full bg-white flex items-center justify-center text-primary medical-shadow">
+                <div className="h-16 w-16 rounded-full bg-white flex items-center justify-center text-teal medical-shadow">
                   <point.icon className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-bold text-accent">{point.title}</h3>
+                <h3 className="text-xl font-bold text-teal-dark">{point.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {point.text}
                 </p>
@@ -144,9 +153,9 @@ export default function CashPayPage() {
       <section className="py-24">
         <div className="container px-4 text-center">
           <div className="max-w-4xl mx-auto flex flex-col items-center">
-            <h2 className="text-4xl md:text-6xl font-bold text-accent mb-10 leading-tight">Ready to <span className="text-primary italic">book your visit</span>?</h2>
+            <h2 className="text-4xl md:text-6xl font-bold text-teal-dark mb-10 leading-tight">Ready to <span className="text-primary italic">book your visit</span>?</h2>
             <div className="flex flex-col sm:flex-row gap-6 w-full max-w-lg">
-              <Button className="flex-1 bg-primary hover:bg-primary/90 rounded-full py-8 px-10 text-xl font-bold shadow-xl shadow-primary/20 group">
+              <Button className="flex-1 bg-teal hover:bg-teal-dark rounded-full py-8 px-10 text-xl font-bold shadow-xl shadow-teal/20 group">
                 Schedule Appointment
                 <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Button>

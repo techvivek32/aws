@@ -29,7 +29,7 @@ export default function PrivacyPolicyPage() {
               As a covered healthcare provider, we comply with HIPAA Privacy and Security Rules. Your Protected Health Information (PHI) is handled with the highest level of confidentiality and security.
             </p>
             <h3 className="text-xl font-semibold mb-3">Your Rights Under HIPAA</h3>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li>Right to access your medical records</li>
               <li>Right to request corrections to your health information</li>
               <li>Right to receive a copy of this privacy notice</li>
@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Information We Collect</h2>
             <h3 className="text-xl font-semibold mb-3">Protected Health Information (PHI)</h3>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li>Personal identifiers (name, address, date of birth, Social Security number)</li>
               <li>Medical history and current health conditions</li>
               <li>Treatment and diagnosis information</li>
@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
             </ul>
 
             <h3 className="text-xl font-semibold mb-3 mt-6">Website Information</h3>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li>IP address and browser information</li>
               <li>Pages visited and time spent on our website</li>
               <li>Contact form submissions</li>
@@ -67,7 +67,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               We use your PHI for:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li><strong>Treatment:</strong> Providing, coordinating, and managing your healthcare services</li>
               <li><strong>Payment:</strong> Billing and collecting payment for services rendered</li>
               <li><strong>Healthcare Operations:</strong> Quality improvement, training, and business management</li>
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               We may share your information in the following circumstances:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li><strong>With Your Consent:</strong> When you provide written authorization</li>
               <li><strong>Healthcare Providers:</strong> With other providers involved in your care</li>
               <li><strong>Insurance Companies:</strong> For billing and payment purposes</li>
@@ -95,7 +95,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               We implement comprehensive security measures to protect your information:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li>Encrypted data transmission and storage</li>
               <li>Secure, password-protected electronic health records systems</li>
               <li>Limited access to PHI on a need-to-know basis</li>
@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Weight Loss Program Privacy</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Information related to our medical weight loss programs, including GLP-1 medications (Ozempic, Wegovy, Mounjaro, Zepbound) and other treatments, is protected as PHI. This includes your weight measurements, treatment plans, medication prescriptions, progress notes, and any related health information. All weight loss program data is subject to the same HIPAA protections as other medical services.
+              Information related to our medical weight loss programs, including GLP-1 medications and other treatments, is protected as PHI. This includes your weight measurements, treatment plans, medication prescriptions, progress notes, and any related health information. All weight loss program data is subject to the same HIPAA protections as other medical services.
             </p>
           </section>
 
@@ -146,7 +146,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               You have the right to:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+            <ul className="list-disc pl-6 space-y-2 text-teal-dark/70">
               <li>Request a copy of your medical records</li>
               <li>Request amendments to your health information</li>
               <li>Request an accounting of disclosures</li>
@@ -162,7 +162,7 @@ export default function PrivacyPolicyPage() {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 For questions about this Privacy Policy, to exercise your rights, or to file a complaint:
               </p>
-              <div className="space-y-2 text-muted-foreground">
+              <div className="space-y-2 text-teal-dark/70">
                 <p><strong>Arizona Women Specialists</strong></p>
                 <p>Privacy Officer</p>
                 <p>Phoenix Office: 4700 N 51st Ave Suite 5, Phoenix, AZ 85031</p>
@@ -177,7 +177,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="mt-12 pt-8 border-t">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-teal-dark/70">
               <Link href="/" className="text-primary hover:underline">Return to Home</Link> | <Link href="/terms-conditions" className="text-primary hover:underline">Terms & Conditions</Link>
             </p>
           </section>

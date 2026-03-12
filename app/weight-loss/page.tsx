@@ -53,24 +53,11 @@ const treatments = [
   {
     title: "Compounded GLP-1",
     subtitle: "Custom-blended medication",
-    price: "From $249/mo",
-    features: ["Personalized dosage", "Physician supervised", "Supplies included"],
-    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=400",
-  },
-  {
-    title: "Semaglutide Injections",
-    subtitle: "FDA-approved active ingredient",
-    price: "From $299/mo",
-    features: ["Weekly administration", "Metabolic health focus", "Doctor review"],
-    image: "https://images.unsplash.com/photo-1631248055158-edec7a3c072b?auto=format&fit=crop&q=80&w=400",
-  },
-  {
-    title: "Oral Weight Loss",
-    subtitle: "Convenient daily medication",
-    price: "From $99/mo",
-    features: ["No needles", "Lifestyle integration", "Monthly supplies"],
-    image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=400",
-  },
+    price: "$100 first month",
+    priceDetail: "$500 total for first 3 months",
+    features: ["Personalized dosage", "Physician supervised", "Supplies included", "In-clinic training"],
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800",
+  }
 ]
 
 const faqs = [
@@ -94,9 +81,9 @@ const faqs = [
 
 export default function WeightLossPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-6">
       {/* Hero Section - Hers Style */}
-      <section className="bg-white py-24 lg:py-32 relative overflow-hidden">
+      <section className="bg-white py-16 lg:py-20 relative overflow-hidden">
         <div className="container px-4">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             <motion.div
@@ -109,35 +96,35 @@ export default function WeightLossPage() {
                 The Science of Weight Loss
               </Badge>
               
-              <h1 className="text-6xl md:text-8xl font-bold text-accent leading-[0.9] tracking-tighter">
-                Weight Loss <br /> <span className="text-primary italic">That Works</span>
+              <h1 className="text-6xl md:text-8xl font-black text-primary leading-[0.9] tracking-tighter">
+                Weight Loss <br /> <span className="text-[#b03a7e] italic font-serif">That Works</span>
               </h1>
               
-              <p className="text-xl md:text-3xl text-muted-foreground leading-relaxed max-w-2xl">
+              <p className="text-xl md:text-3xl text-teal-dark font-black leading-relaxed max-w-2xl">
                 Modern medical treatments prescribed by real doctors. Designed for your biology.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 w-full max-w-lg">
-                <Button className="flex-1 bg-primary hover:bg-primary/90 rounded-full py-10 px-12 text-2xl font-bold shadow-2xl shadow-primary/20">
-                  Start My Plan
+                <Button className="flex-1 bg-teal hover:bg-teal-dark text-white rounded-full py-10 px-12 text-2xl font-black shadow-2xl shadow-teal/30" asChild>
+                  <a href="#book-appointment">Start My Plan</a>
                 </Button>
-                <Button variant="outline" className="flex-1 rounded-full py-10 px-12 text-2xl font-bold border-2 border-accent text-accent hover:bg-accent hover:text-white transition-all">
-                  How it works
+                <Button variant="outline" className="flex-1 rounded-full py-10 px-12 text-2xl font-black border-4 border-teal/30 text-teal hover:bg-teal hover:text-white transition-all" asChild>
+                  <a href="#how-it-works">How it works</a>
                 </Button>
               </div>
               
               <div className="flex flex-wrap justify-center gap-12 pt-10">
                 <div className="flex items-center gap-3">
-                  <ShieldCheck className="h-6 w-6 text-primary" />
-                  <span className="font-bold text-accent">Physician Supervised</span>
+                  <ShieldCheck className="h-8 w-8 text-primary stroke-[3]" />
+                  <span className="font-black text-teal-dark text-xl">Physician Supervised</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <UserCheck className="h-6 w-6 text-primary" />
-                  <span className="font-bold text-accent">Personalized Dosage</span>
+                  <UserCheck className="h-8 w-8 text-primary stroke-[3]" />
+                  <span className="font-black text-teal-dark text-xl">Personalized Dosage</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Activity className="h-6 w-6 text-primary" />
-                  <span className="font-bold text-accent">No Hidden Fees</span>
+                  <Activity className="h-8 w-8 text-primary stroke-[3]" />
+                  <span className="font-black text-teal-dark text-xl">No Hidden Fees</span>
                 </div>
               </div>
             </motion.div>
@@ -160,17 +147,17 @@ export default function WeightLossPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="flex flex-col gap-6 p-10 bg-white rounded-[3rem] border border-primary/5 medical-shadow relative overflow-hidden group hover:bg-primary hover:text-white transition-all duration-500"
+                className="flex flex-col gap-6 p-10 bg-white rounded-[3rem] border border-primary/5 medical-shadow relative overflow-hidden group hover:bg-teal hover:text-white transition-all duration-500"
               >
-                <div className="text-5xl font-black text-primary/10 group-hover:text-white/20 transition-colors absolute top-6 right-8">
+                <div className="text-5xl font-black text-teal/10 group-hover:text-white/20 transition-colors absolute top-6 right-8">
                   {step.number}
                 </div>
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-colors">
-                  <step.icon className="h-7 w-7" />
+                <div className="w-16 h-16 rounded-2xl bg-primary/20 text-primary flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-colors shadow-sm">
+                  <step.icon className="h-8 w-8 stroke-[3]" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
+                  <h3 className="text-3xl font-black mb-4 tracking-tight">{step.title}</h3>
+                  <p className="text-xl text-teal-dark font-black group-hover:text-white/90 transition-colors leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -180,52 +167,78 @@ export default function WeightLossPage() {
         </div>
       </section>
 
-      {/* Treatments Grid */}
-      <section className="py-24">
-        <div className="container px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-accent mb-16">
-            Find the <span className="text-primary italic">Right Solution</span> for You
-          </h2>
+      {/* Featured Treatment Section */}
+      <section className="py-24 bg-white">
+        <div className="container px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-7xl font-black text-primary mb-6 tracking-tighter">
+              Find the <span className="text-[#b03a7e] italic font-serif underline decoration-[#b03a7e]/20 underline-offset-8">Right Solution</span> for You
+            </h2>
+            <p className="text-xl md:text-3xl text-teal-dark font-black max-w-3xl mx-auto leading-relaxed">
+              Our clinical program is built around the most effective medical weight loss advancements available today.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="flex justify-center">
             {treatments.map((t, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-[4rem] overflow-hidden border border-primary/10 medical-shadow flex flex-col group cursor-pointer hover:border-primary/30 transition-all"
+                className="relative w-full max-w-5xl bg-primary/5 rounded-[4rem] overflow-hidden border-8 border-white medical-shadow"
               >
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src={t.image} 
-                    alt={t.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute top-8 left-8">
-                    <Badge className="bg-white/90 text-accent font-bold px-4 py-1.5 rounded-full border-none shadow-sm backdrop-blur-sm">
-                      {t.price}
-                    </Badge>
+                <div className="grid lg:grid-cols-2 items-center">
+                  <div className="relative h-[400px] lg:h-[700px] overflow-hidden">
+                    <img 
+                      src={t.image} 
+                      alt={t.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute top-10 left-10">
+                      <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-teal/10">
+                        <div className="text-3xl font-black text-teal">{t.price}</div>
+                        <div className="text-sm font-bold text-teal-dark/70">{t.priceDetail}</div>
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/5"></div>
                   </div>
-                </div>
-                <div className="p-12 flex flex-col items-center text-center">
-                  <h3 className="text-3xl font-bold text-accent mb-2">{t.title}</h3>
-                  <p className="text-lg text-muted-foreground mb-8">{t.subtitle}</p>
                   
-                  <ul className="flex flex-col gap-4 mb-10 w-full">
-                    {t.features.map((f, i) => (
-                      <li key={i} className="flex items-center gap-3 text-accent font-medium">
-                        <Check className="h-5 w-5 text-primary shrink-0" />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Button className="w-full bg-accent hover:bg-accent/90 rounded-full py-8 text-xl font-bold group">
-                    Learn More
-                    <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <div className="p-12 lg:p-20 flex flex-col gap-10">
+                    <div className="inline-flex items-center gap-2 bg-teal text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] self-start shadow-xl">
+                      Highly Recommended
+                    </div>
+                    
+                    <h3 className="text-5xl md:text-7xl font-black text-primary tracking-tighter leading-none">{t.title}</h3>
+                    
+                    <div className="flex flex-col gap-3">
+                      <div className="text-4xl font-black text-teal-dark">{t.price}</div>
+                      <div className="text-2xl font-bold text-teal-dark/70">{t.priceDetail}</div>
+                    </div>
+                    
+                    <p className="text-2xl text-teal-dark font-black leading-relaxed">
+                      {t.subtitle}. Our physician-supervised program uses custom-blended GLP-1 therapy tailored specifically to your metabolic profile.
+                    </p>
+                    
+                    <div className="grid gap-6 py-4">
+                      {t.features.map((feature, fIdx) => (
+                        <div key={fIdx} className="flex items-center gap-5">
+                          <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-teal">
+                            <Check className="h-6 w-6 stroke-[4]" />
+                          </div>
+                          <span className="text-2xl font-black text-teal-dark tracking-tight">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <Button className="bg-teal hover:bg-teal-dark text-white rounded-full py-10 px-14 text-3xl font-black shadow-2xl shadow-teal/30 transition-all hover:scale-[1.02] self-start mt-4" asChild>
+                      <a href="#book-appointment">
+                        Get Started Now
+                        <ArrowRight className="ml-3 h-10 w-10" />
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -237,8 +250,8 @@ export default function WeightLossPage() {
       <section className="py-24 bg-secondary/30">
         <div className="container px-4 max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-accent mb-6 flex items-center justify-center gap-4">
-              <HelpCircle className="h-10 w-10 text-primary" />
+            <h2 className="text-4xl md:text-5xl font-bold text-teal-dark mb-6 flex items-center justify-center gap-4">
+              <HelpCircle className="h-10 w-10 text-teal" />
               Common Questions
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
@@ -249,7 +262,7 @@ export default function WeightLossPage() {
           <Accordion type="single" collapsible className="w-full space-y-6">
             {faqs.map((faq, idx) => (
               <AccordionItem key={idx} value={`item-${idx}`} className="bg-white rounded-[2rem] border-none medical-shadow px-10 py-4">
-                <AccordionTrigger className="text-2xl font-bold text-accent hover:text-primary hover:no-underline transition-colors text-left py-6">
+                <AccordionTrigger className="text-2xl font-bold text-teal-dark hover:text-primary hover:no-underline transition-colors text-left py-6">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-lg text-muted-foreground leading-relaxed pb-8">
@@ -279,11 +292,11 @@ export default function WeightLossPage() {
                 Take the first step today. Our medical team is ready to support your journey to a healthier you.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 w-full max-w-lg">
-                <Button className="flex-1 bg-primary hover:bg-primary/90 rounded-full py-10 px-12 text-2xl font-bold border-none">
-                  Get Started
+                <Button className="flex-1 bg-teal hover:bg-teal-dark text-white rounded-full py-10 px-12 text-2xl font-bold border-none" asChild>
+                  <a href="#book-appointment">Get Started</a>
                 </Button>
-                <Button variant="outline" className="flex-1 rounded-full py-10 px-12 text-2xl font-bold border-2 border-white/20 text-white hover:bg-white hover:text-accent transition-all">
-                  Contact Specialist
+                <Button variant="outline" className="flex-1 rounded-full py-10 px-12 text-2xl font-bold border-4 border-white/30 text-white hover:bg-white hover:text-teal-dark transition-all" asChild>
+                  <a href="tel:6238467597">Contact Specialist</a>
                 </Button>
               </div>
             </motion.div>

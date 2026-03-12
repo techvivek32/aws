@@ -95,14 +95,14 @@ export default function AdminServicesPage() {
   return (
     <div className="space-y-10">
       <div className="flex justify-between items-center">
-        <h2 className="text-3xl font-black text-accent italic underline decoration-primary/20 underline-offset-8">Manage Services</h2>
+        <h2 className="text-3xl font-black text-teal-dark italic underline decoration-primary/20 underline-offset-8">Manage Services</h2>
         <Button 
           onClick={() => {
             setIsAdding(true)
             setEditingId(null)
             setFormData({ title: "", slug: "", description: "", image: "", price: "", category: "" })
           }}
-          className="bg-primary hover:bg-primary/90 rounded-full px-8 py-6 text-lg font-bold shadow-lg"
+          className="bg-teal hover:bg-teal-dark rounded-full px-8 py-6 text-lg font-bold shadow-lg"
         >
           <Plus className="mr-2 h-6 w-6" /> Add Service
         </Button>
@@ -120,27 +120,27 @@ export default function AdminServicesPage() {
             <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-accent px-2">Service Title</label>
+                  <label className="text-sm font-bold text-teal-dark px-2">Service Title</label>
                   <Input 
                     required
                     value={formData.title}
                     onChange={(e) => setFormData({...formData, title: e.target.value})}
-                    placeholder="e.g. Obstetrics & Pregnancy"
+                    placeholder="e.g. Pregnancy Care"
                     className="py-7 px-6 rounded-full border-primary/10"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-accent px-2">Slug (URL)</label>
+                  <label className="text-sm font-bold text-teal-dark px-2">Slug (URL)</label>
                   <Input 
                     required
                     value={formData.slug}
                     onChange={(e) => setFormData({...formData, slug: e.target.value})}
-                    placeholder="e.g. obstetrics"
+                    placeholder="e.g. pregnancy"
                     className="py-7 px-6 rounded-full border-primary/10"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-accent px-2">Category</label>
+                  <label className="text-sm font-bold text-teal-dark px-2">Category</label>
                   <Input 
                     required
                     value={formData.category}
@@ -152,7 +152,7 @@ export default function AdminServicesPage() {
               </div>
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-accent px-2">Image URL</label>
+                  <label className="text-sm font-bold text-teal-dark px-2">Image URL</label>
                   <Input 
                     required
                     value={formData.image}
@@ -162,7 +162,7 @@ export default function AdminServicesPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-accent px-2">Price (Optional)</label>
+                  <label className="text-sm font-bold text-teal-dark px-2">Price (Optional)</label>
                   <Input 
                     value={formData.price}
                     onChange={(e) => setFormData({...formData, price: e.target.value})}
@@ -171,7 +171,7 @@ export default function AdminServicesPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-accent px-2">Description</label>
+                  <label className="text-sm font-bold text-teal-dark px-2">Description</label>
                   <Textarea 
                     required
                     value={formData.description}
@@ -181,7 +181,7 @@ export default function AdminServicesPage() {
                 </div>
               </div>
               <div className="md:col-span-2">
-                <Button className="w-full bg-primary py-8 rounded-full text-xl font-bold shadow-xl">
+                <Button className="w-full bg-teal py-8 rounded-full text-xl font-bold shadow-xl">
                   {loading ? <Loader2 className="animate-spin h-6 w-6" /> : (
                     <>
                       <Save className="mr-2 h-6 w-6" />
@@ -217,7 +217,7 @@ export default function AdminServicesPage() {
             </div>
             <CardContent className="p-8">
               <span className="text-xs font-black text-primary uppercase tracking-widest bg-primary/10 px-4 py-1.5 rounded-full">{service.category}</span>
-              <h3 className="text-2xl font-black text-accent mt-4">{service.title}</h3>
+              <h3 className="text-2xl font-black text-teal-dark mt-4">{service.title}</h3>
               <p className="text-muted-foreground mt-3 line-clamp-2 font-medium">{service.description}</p>
               {service.price && <p className="text-primary font-black text-lg mt-4">{service.price}</p>}
             </CardContent>

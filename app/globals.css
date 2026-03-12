@@ -5,48 +5,48 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 180 60% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 180 60% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 180 60% 15%;
 
-    --primary: 210 100% 30%;
+    --primary: 180 46% 33%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 13% 96%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 30 20% 96%;
+    --secondary-foreground: 180 60% 15%;
 
     --muted: 30 20% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 180 30% 35%;
 
-    --accent: 222.2 47.4% 11.2%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 180 60% 15%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 340 82% 52%;
+    --ring: 180 46% 33%;
 
     --radius: 1rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 180 60% 15%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 180 60% 15%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 180 60% 15%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 340 82% 52%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 180 46% 33%;
+    --primary-foreground: 180 60% 15%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -62,7 +62,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 340 82% 52%;
+    --ring: 180 46% 33%;
   }
 }
 
@@ -75,16 +75,16 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    @apply font-black tracking-tight;
   }
 }
 
 .hers-gradient {
-  background: linear-gradient(135deg, #f8f5f2 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
 }
 
 .medical-shadow {
-  box-shadow: 0 10px 30px -5px rgba(233, 30, 99, 0.05), 0 5px 15px -5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px -5px rgba(45, 122, 122, 0.15), 0 5px 15px -5px rgba(0, 0, 0, 0.05);
 }
 
 .sticky-header {

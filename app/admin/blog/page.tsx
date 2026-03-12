@@ -99,14 +99,14 @@ export default function AdminBlogPage() {
   return (
     <div className="space-y-10">
       <div className="flex justify-between items-center">
-        <h2 className="text-3xl font-black text-accent italic underline decoration-primary/20 underline-offset-8">Manage Blog Posts</h2>
+        <h2 className="text-3xl font-black text-teal-dark italic underline decoration-primary/20 underline-offset-8">Manage Blog Posts</h2>
         <Button 
           onClick={() => {
             setIsAdding(true)
             setEditingId(null)
             setFormData({ title: "", slug: "", excerpt: "", content: "", image: "", category: "", author: "Medical Director", status: "published" })
           }}
-          className="bg-primary hover:bg-primary/90 rounded-full px-8 py-6 text-lg font-bold shadow-lg"
+          className="bg-teal hover:bg-teal-dark rounded-full px-8 py-6 text-lg font-bold shadow-lg"
         >
           <Plus className="mr-2 h-6 w-6" /> Create Post
         </Button>
@@ -125,7 +125,7 @@ export default function AdminBlogPage() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-accent px-2">Post Title</label>
+                    <label className="text-sm font-bold text-teal-dark px-2">Post Title</label>
                     <Input 
                       required
                       value={formData.title}
@@ -135,7 +135,7 @@ export default function AdminBlogPage() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-accent px-2">Slug (URL)</label>
+                    <label className="text-sm font-bold text-teal-dark px-2">Slug (URL)</label>
                     <Input 
                       required
                       value={formData.slug}
@@ -145,7 +145,7 @@ export default function AdminBlogPage() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-accent px-2">Category</label>
+                    <label className="text-sm font-bold text-teal-dark px-2">Category</label>
                     <Input 
                       required
                       value={formData.category}
@@ -157,7 +157,7 @@ export default function AdminBlogPage() {
                 </div>
                 <div className="space-y-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-accent px-2">Image URL</label>
+                    <label className="text-sm font-bold text-teal-dark px-2">Image URL</label>
                     <Input 
                       required
                       value={formData.image}
@@ -167,7 +167,7 @@ export default function AdminBlogPage() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-accent px-2">Excerpt</label>
+                    <label className="text-sm font-bold text-teal-dark px-2">Excerpt</label>
                     <Input 
                       required
                       value={formData.excerpt}
@@ -177,12 +177,12 @@ export default function AdminBlogPage() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-accent px-2">Status</label>
+                    <label className="text-sm font-bold text-teal-dark px-2">Status</label>
                     <select 
                       required
                       value={formData.status}
                       onChange={(e) => setFormData({...formData, status: e.target.value})}
-                      className="flex h-14 w-full items-center justify-between rounded-full border border-primary/10 bg-white px-6 py-2 text-lg font-medium ring-offset-background focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none"
+                      className="flex h-14 w-full items-center justify-between rounded-full border border-primary/10 bg-white px-6 py-2 text-lg font-medium ring-offset-background focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none"
                     >
                       <option value="draft">Draft</option>
                       <option value="published">Published</option>
@@ -191,7 +191,7 @@ export default function AdminBlogPage() {
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-bold text-accent px-2">Content (Markdown supported)</label>
+                <label className="text-sm font-bold text-teal-dark px-2">Content (Markdown supported)</label>
                 <Textarea 
                   required
                   value={formData.content}
@@ -199,7 +199,7 @@ export default function AdminBlogPage() {
                   className="min-h-[300px] rounded-[2rem] border-primary/10 p-10 text-lg leading-relaxed"
                 />
               </div>
-              <Button className="w-full bg-primary py-8 rounded-full text-xl font-bold shadow-xl">
+              <Button className="w-full bg-teal py-8 rounded-full text-xl font-bold shadow-xl">
                 {loading ? <Loader2 className="animate-spin h-6 w-6" /> : (
                   <>
                     <Save className="mr-2 h-6 w-6" />
@@ -229,11 +229,11 @@ export default function AdminBlogPage() {
                         <button onClick={() => handleDelete(post._id)} className="p-3 bg-secondary text-red-600 rounded-full hover:bg-red-600 hover:text-white transition-all"><Trash2 className="h-5 w-5" /></button>
                       </div>
                     </div>
-                    <h3 className="text-2xl font-black text-accent">{post.title}</h3>
+                    <h3 className="text-2xl font-black text-teal-dark">{post.title}</h3>
                     <p className="text-muted-foreground mt-2 line-clamp-2 font-medium">{post.excerpt}</p>
                   </div>
                   <div className="mt-6 flex items-center justify-between">
-                    <p className="text-sm font-bold text-accent">By {post.author} • {new Date(post.publishedAt).toLocaleDateString()}</p>
+                    <p className="text-sm font-bold text-teal-dark">By {post.author} • {new Date(post.publishedAt).toLocaleDateString()}</p>
                     <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest ${
                       post.status === 'published' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'
                     }`}>

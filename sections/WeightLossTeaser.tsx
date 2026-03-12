@@ -10,118 +10,138 @@ import Link from "next/link"
 const treatments = [
   {
     title: "Compounded GLP-1",
-    subtitle: "Custom-blended for your needs",
-    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=400",
-  },
-  {
-    title: "Semaglutide Injections",
-    subtitle: "FDA-approved active ingredient",
-    image: "https://images.unsplash.com/photo-1631248055158-edec7a3c072b?auto=format&fit=crop&q=80&w=400",
-  },
-  {
-    title: "Oral Weight Loss",
-    subtitle: "Convenient daily medication",
-    image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=400",
-  },
+    subtitle: "Custom-blended for your unique needs",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800",
+  }
 ]
 
 export function WeightLossTeaser() {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-20 bg-white overflow-hidden">
       <div className="container px-4">
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-20">
-          <Badge variant="secondary" className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest mb-6">
-            New Program
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+          <Badge variant="secondary" className="bg-teal/5 text-teal border-teal/10 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6">
+            Expert Guidance
           </Badge>
-          <h2 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight text-accent mb-8">
-            Doctor-Supervised <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Medical Weight Loss</span>
+          <h2 className="text-5xl md:text-6xl font-bold leading-[1.1] tracking-tighter text-teal-dark mb-6">
+            Doctor-Supervised <br /><span className="text-magenta italic">Medical Weight Loss</span>
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            Our clinic now offers a medically supervised weight loss program designed to help patients safely lose weight using modern treatments such as GLP-1 medications.
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-bold">
+            Our clinic offers a medically supervised weight loss program designed to help patients safely lose weight using modern treatments.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="flex justify-center mb-20">
           {treatments.map((t, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="group cursor-pointer"
+              className="relative w-full max-w-5xl bg-teal/5 rounded-[4rem] overflow-hidden border-8 border-white medical-shadow group"
             >
-              <div className="relative rounded-[2rem] overflow-hidden mb-6 aspect-[4/5] medical-shadow border-4 border-white">
-                <img 
-                  src={t.image} 
-                  alt={t.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-accent/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                  <p className="text-white text-lg font-bold">Learn more</p>
+              <div className="grid lg:grid-cols-2 items-center">
+                <div className="relative h-[400px] lg:h-[600px] overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800" 
+                    alt={t.title}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-teal/5"></div>
+                </div>
+                
+                <div className="p-12 lg:p-20 flex flex-col gap-8">
+                  <div className="inline-flex items-center gap-2 bg-teal text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest self-start shadow-lg">
+                    Featured Program
+                  </div>
+                  
+                  <h3 className="text-4xl md:text-6xl font-black text-teal tracking-tighter leading-none">{t.title}</h3>
+                  
+                  <div className="flex flex-col gap-2">
+                    <div className="text-3xl font-black text-teal-dark">$100 first month</div>
+                    <div className="text-xl font-bold text-teal-dark/70">$500 total for first 3 months</div>
+                  </div>
+                  
+                  <p className="text-xl md:text-2xl text-teal-dark font-black leading-relaxed">
+                    {t.subtitle}. Our physician-supervised program uses the latest advancements in GLP-1 therapy to help you achieve sustainable health.
+                  </p>
+                  
+                  <div className="grid gap-6 py-4">
+                    {[
+                      "Custom-blended medication",
+                      "Physician-led dosing",
+                      "Personalized wellness plan",
+                      "Ongoing clinical support"
+                    ].map((feature, fIdx) => (
+                      <div key={fIdx} className="flex items-center gap-4">
+                        <div className="h-8 w-8 rounded-full bg-teal/20 flex items-center justify-center text-teal">
+                          <Check className="h-5 w-5 stroke-[4]" />
+                        </div>
+                        <span className="text-lg font-black text-teal-dark">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Button className="bg-teal hover:bg-teal-dark text-white rounded-full py-10 px-12 text-2xl font-black shadow-2xl shadow-teal/20 transition-all hover:scale-[1.02] self-start mt-4" asChild>
+                    <Link href="/weight-loss">
+                      Start Your Journey
+                      <ArrowRight className="ml-3 h-8 w-8" />
+                    </Link>
+                  </Button>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-accent mb-2 group-hover:text-primary transition-colors">{t.title}</h3>
-              <p className="text-muted-foreground font-medium">{t.subtitle}</p>
             </motion.div>
           ))}
         </div>
 
-        <div className="bg-secondary/50 rounded-[3rem] p-12 lg:p-20 grid lg:grid-cols-2 gap-16 items-center border border-primary/5">
-          <div className="flex flex-col gap-8">
-            <h3 className="text-4xl font-bold text-accent">Why start your journey with us?</h3>
-            <div className="grid gap-6">
+        <div className="bg-teal/5 rounded-[4rem] p-16 lg:p-24 grid lg:grid-cols-2 gap-20 items-center border border-teal/10 relative overflow-hidden">
+          <div className="flex flex-col gap-10 relative z-10">
+            <h3 className="text-4xl md:text-5xl font-bold text-teal-dark leading-tight">Why start your journey <br /> with us?</h3>
+            <div className="grid gap-8">
               {[
                 { icon: UserCheck, title: "Physician Supervised", text: "Expert medical oversight throughout your entire journey." },
                 { icon: ShieldCheck, title: "Personalized Treatment Plan", text: "Customized medication and dosage based on your health profile." },
-                { icon: Activity, title: "Weekly Injections Available", text: "In-clinic support for those who prefer supervised care." },
+                { icon: Activity, title: "In-Clinic Support", text: "Weekly injections available for those who prefer supervised care." },
                 { icon: MapPin, title: "Lifestyle Guidance", text: "Comprehensive support for long-term health and wellness." },
               ].map((point, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <div className="h-12 w-12 rounded-2xl bg-white flex items-center justify-center text-primary medical-shadow shrink-0">
-                    <point.icon className="h-6 w-6" />
+                <div key={idx} className="flex gap-6">
+                  <div className="h-14 w-14 rounded-2xl bg-white flex items-center justify-center text-teal medical-shadow shrink-0 shadow-sm">
+                    <point.icon className="h-7 w-7" />
                   </div>
-                  <div>
-                    <h4 className="font-bold text-accent text-lg">{point.title}</h4>
-                    <p className="text-muted-foreground">{point.text}</p>
+                  <div className="flex flex-col gap-1">
+                    <h4 className="font-bold text-teal-dark text-xl tracking-tight">{point.title}</h4>
+                    <p className="text-lg text-muted-foreground font-medium leading-relaxed">{point.text}</p>
                   </div>
                 </div>
               ))}
             </div>
             
-            <div className="pt-6">
-              <Button className="bg-primary hover:bg-primary/90 rounded-full py-8 px-12 text-xl font-bold shadow-xl shadow-primary/20 group w-full sm:w-auto" asChild>
+            <div className="pt-8">
+              <Button className="bg-teal hover:bg-teal-dark text-white rounded-full py-8 px-12 text-xl font-bold shadow-xl shadow-teal/20 group w-full sm:w-auto transition-all duration-300 hover:scale-[1.02]" asChild>
                 <Link href="/weight-loss">
                   Start Weight Loss Plan
-                  <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
             </div>
           </div>
           
-          <div className="relative">
-            <div className="relative rounded-[2.5rem] overflow-hidden medical-shadow border-4 border-white aspect-square lg:aspect-[4/5]">
+          <div className="relative hidden lg:block h-full">
+            <div className="absolute inset-0 bg-teal/10 rounded-[3rem] -rotate-3 -z-10"></div>
+            <div className="relative h-full min-h-[500px] rounded-[3rem] overflow-hidden medical-shadow border-4 border-white">
               <img 
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800" 
-                alt="Health Journey"
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800" 
+                alt="Patient Journey"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
-            {/* Floating Trust Point */}
-            <motion.div 
-              animate={{ x: [0, 10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-10 -right-10 bg-white p-6 rounded-3xl medical-shadow z-20 border border-primary/10 max-w-[220px]"
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="h-4 w-4 rounded-full bg-green-500"></div>
-                <p className="text-sm font-bold text-accent italic underline decoration-green-500/20 underline-offset-4 uppercase tracking-tighter">Certified Provider</p>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">Our medical weight loss program is managed by board-certified physicians.</p>
-            </motion.div>
           </div>
         </div>
       </div>
     </section>
   )
 }
+

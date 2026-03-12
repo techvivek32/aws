@@ -36,16 +36,16 @@ const locations = [
 
 export default function ContactPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-6">
       {/* Hero Section */}
-      <section className="bg-secondary/30 py-24 relative overflow-hidden">
+      <section className="bg-secondary/30 py-16 relative overflow-hidden">
         <div className="container px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-accent mb-8 leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-teal-dark mb-8 leading-tight tracking-tight">
               Get in <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Touch</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -67,7 +67,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
               className="bg-white rounded-[4rem] p-10 lg:p-16 medical-shadow border border-primary/5 flex flex-col h-full"
             >
-              <h2 className="text-4xl font-bold text-accent mb-6 italic underline decoration-primary/20 underline-offset-8">Send us a message</h2>
+              <h2 className="text-4xl font-bold text-teal-dark mb-6 italic underline decoration-primary/20 underline-offset-8">Send us a message</h2>
               <p className="text-xl text-muted-foreground mb-12">
                 Fill out the form below and our team will get back to you within 24-48 business hours.
               </p>
@@ -75,32 +75,32 @@ export default function ContactPage() {
               <form className="flex flex-col gap-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-3">
-                    <label className="text-lg font-bold text-accent px-2">First Name</label>
-                    <Input placeholder="Jane" className="py-8 px-8 rounded-full text-lg border-primary/10 focus:ring-primary medical-shadow" />
+                    <label className="text-lg font-bold text-teal-dark px-2">First Name</label>
+                    <Input placeholder="Jane" className="py-8 px-8 rounded-full text-lg border-primary/10 focus:ring-teal medical-shadow" />
                   </div>
                   <div className="flex flex-col gap-3">
-                    <label className="text-lg font-bold text-accent px-2">Last Name</label>
-                    <Input placeholder="Doe" className="py-8 px-8 rounded-full text-lg border-primary/10 focus:ring-primary medical-shadow" />
+                    <label className="text-lg font-bold text-teal-dark px-2">Last Name</label>
+                    <Input placeholder="Doe" className="py-8 px-8 rounded-full text-lg border-primary/10 focus:ring-teal medical-shadow" />
                   </div>
                 </div>
                 
                 <div className="flex flex-col gap-3">
-                  <label className="text-lg font-bold text-accent px-2">Email Address</label>
-                  <Input placeholder="jane@example.com" type="email" className="py-8 px-8 rounded-full text-lg border-primary/10 focus:ring-primary medical-shadow" />
+                  <label className="text-lg font-bold text-teal-dark px-2">Email Address</label>
+                  <Input placeholder="jane@example.com" type="email" className="py-8 px-8 rounded-full text-lg border-primary/10 focus:ring-teal medical-shadow" />
                 </div>
                 
                 <div className="flex flex-col gap-3">
-                  <label className="text-lg font-bold text-accent px-2">Phone Number</label>
-                  <Input placeholder="(623) 000-0000" type="tel" className="py-8 px-8 rounded-full text-lg border-primary/10 focus:ring-primary medical-shadow" />
+                  <label className="text-lg font-bold text-teal-dark px-2">Phone Number</label>
+                  <Input placeholder="(623) 000-0000" type="tel" className="py-8 px-8 rounded-full text-lg border-primary/10 focus:ring-teal medical-shadow" />
                 </div>
                 
                 <div className="flex flex-col gap-3">
-                  <label className="text-lg font-bold text-accent px-2">How can we help?</label>
-                  <Textarea placeholder="Tell us more about your needs..." className="min-h-[150px] py-6 px-8 rounded-[2rem] text-lg border-primary/10 focus:ring-primary medical-shadow resize-none" />
+                  <label className="text-lg font-bold text-teal-dark px-2">How can we help?</label>
+                  <Textarea placeholder="Tell us more about your needs..." className="min-h-[150px] py-6 px-8 rounded-[2rem] text-lg border-primary/10 focus:ring-teal medical-shadow resize-none" />
                 </div>
                 
                 <div className="pt-4">
-                  <Button className="w-full bg-primary hover:bg-primary/90 rounded-full py-10 text-2xl font-bold shadow-xl shadow-primary/20 group">
+                  <Button className="w-full bg-teal hover:bg-teal-dark rounded-full py-10 text-2xl font-bold shadow-xl shadow-teal/20 group">
                     Send Message
                     <Send className="ml-3 h-6 w-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </Button>
@@ -124,7 +124,7 @@ export default function ContactPage() {
                   className="bg-secondary/20 rounded-[3rem] p-10 lg:p-14 border border-primary/5 flex flex-col gap-8 relative overflow-hidden group"
                 >
                   <div className="flex flex-col gap-6 relative z-10">
-                    <h3 className="text-3xl font-bold text-accent">{loc.name}</h3>
+                    <h3 className="text-3xl font-bold text-teal-dark">{loc.name}</h3>
                     
                     <div className="grid gap-6">
                       <div className="flex gap-4">
@@ -132,7 +132,7 @@ export default function ContactPage() {
                           <MapPin className="h-6 w-6" />
                         </div>
                         <div>
-                          <p className="font-bold text-accent text-lg">Address</p>
+                          <p className="font-bold text-teal-dark text-lg">Address</p>
                           <p className="text-muted-foreground text-lg">{loc.address}</p>
                         </div>
                       </div>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                           <Phone className="h-6 w-6" />
                         </div>
                         <div>
-                          <p className="font-bold text-accent text-lg">Phone</p>
+                          <p className="font-bold text-teal-dark text-lg">Phone</p>
                           <a href={`tel:${loc.phone.replace(/\D/g,'')}`} className="text-muted-foreground text-lg hover:text-primary transition-colors underline decoration-primary/20">{loc.phone}</a>
                         </div>
                       </div>
@@ -152,18 +152,18 @@ export default function ContactPage() {
                           <Clock className="h-6 w-6" />
                         </div>
                         <div>
-                          <p className="font-bold text-accent text-lg">Hours</p>
+                          <p className="font-bold text-teal-dark text-lg">Hours</p>
                           <p className="text-muted-foreground text-lg">{loc.hours}</p>
                         </div>
                       </div>
                     </div>
                     
                     <div className="pt-6 flex flex-col sm:flex-row gap-4">
-                      <Button className="bg-primary hover:bg-primary/90 rounded-full py-8 px-10 text-xl font-bold shadow-xl shadow-primary/20 group flex-1">
+                      <Button className="bg-teal hover:bg-teal-dark rounded-full py-8 px-10 text-xl font-bold shadow-xl shadow-teal/20 group flex-1">
                         Get Directions
                         <Navigation className="ml-2 h-5 w-5" />
                       </Button>
-                      <Button variant="outline" className="rounded-full py-8 px-10 text-xl font-bold border-2 border-accent text-accent hover:bg-accent hover:text-white transition-all shadow-lg flex-1">
+                      <Button variant="outline" className="rounded-full py-8 px-10 text-xl font-bold border-2 border-accent text-teal-dark hover:bg-accent hover:text-white transition-all shadow-lg flex-1">
                         Book Now
                       </Button>
                     </div>
@@ -185,7 +185,7 @@ export default function ContactPage() {
                   <h3 className="text-2xl font-bold mb-2">Need immediate assistance?</h3>
                   <p className="text-white/70 text-lg">Call us directly during office hours.</p>
                 </div>
-                <div className="h-14 w-14 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="h-14 w-14 rounded-full bg-teal flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Phone className="h-6 w-6 text-white" />
                 </div>
               </motion.div>
@@ -198,7 +198,7 @@ export default function ContactPage() {
       <section className="py-24 bg-secondary/30">
         <div className="container px-4">
           <div className="flex flex-col gap-12">
-            <h2 className="text-4xl font-bold text-accent text-center mb-4">Find us on <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Google Maps</span></h2>
+            <h2 className="text-4xl font-bold text-teal-dark text-center mb-4">Find us on <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Google Maps</span></h2>
             <div className="grid lg:grid-cols-2 gap-12">
               {locations.map((loc, idx) => (
                 <div key={idx} className="w-full h-[500px] rounded-[3rem] overflow-hidden medical-shadow border-8 border-white relative group">
@@ -213,7 +213,7 @@ export default function ContactPage() {
                     className="grayscale hover:grayscale-0 transition-all duration-700"
                   />
                   <div className="absolute top-8 left-8">
-                    <Badge className="bg-white/90 text-accent font-bold px-6 py-2 rounded-full border-none shadow-lg backdrop-blur-md text-lg">
+                    <Badge className="bg-white/90 text-teal-dark font-bold px-6 py-2 rounded-full border-none shadow-lg backdrop-blur-md text-lg">
                       {loc.name}
                     </Badge>
                   </div>

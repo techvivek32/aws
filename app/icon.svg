@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#339999;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b03a7e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#grad)"/>
+  
+  <!-- Female symbol in white -->
+  <g fill="white" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Circle (head) -->
+    <circle cx="50" cy="30" r="12" fill="none"/>
+    
+    <!-- Body/dress shape -->
+    <path d="M50 42 C38 42 32 55 32 70 C32 85 45 92 50 95 C55 92 68 85 68 70 C68 55 62 42 50 42 Z" fill="none"/>
+    
+    <!-- Cross at bottom -->
+    <line x1="50" y1="95" x2="50" y2="105" stroke-width="4"/>
+    <line x1="43" y1="100" x2="57" y2="100" stroke-width="4"/>
+  </g>
+  
+  <!-- Accent detail -->
+  <path d="M35 55 C42 52 58 52 65 55" stroke="white" stroke-width="2" fill="none" opacity="0.7"/>
+</svg>

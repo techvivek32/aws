@@ -39,22 +39,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
           <div className="flex flex-col gap-6 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-4 group">
-              <div className="relative h-12 w-8 flex items-center justify-center">
-                <svg viewBox="0 0 100 200" className="h-full w-full text-primary fill-none stroke-current stroke-[4]" strokeLinecap="round">
-                  <circle cx="50" cy="30" r="15" />
-                  <path d="M50 45 C30 45 20 70 20 100 C20 150 40 180 50 190 C60 180 80 150 80 100 C80 70 70 45 50 45 Z" />
-                  <path d="M30 70 C40 65 60 65 70 70" />
-                </svg>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-light tracking-tight text-[#b03a7e] font-serif leading-none mb-1">
-                  Arizona Women <span className="font-normal">Specialists</span>
-                </span>
-                <span className="text-[8px] font-black tracking-[0.4em] text-teal-dark uppercase border-t border-accent-foreground/10 pt-1">
-                  GYNECOLOGY & WOMEN'S CARE
-                </span>
-              </div>
+            <Link href="/" className="flex items-center group">
+              <img 
+                src="/images/logo.png" 
+                alt="Arizona Women Specialists" 
+                className="h-20 md:h-24 w-auto object-contain"
+              />
             </Link>
             <p className="text-muted-foreground leading-relaxed font-bold">
               Providing modern, compassionate, and personalized women's care, gynecology, and weight loss care to women across the Phoenix Valley for over 20 years.

@@ -91,7 +91,7 @@ export default function ServicesPage() {
                     
                     <div className="pt-10 flex flex-col sm:flex-row gap-6">
                       <Button className="bg-teal hover:bg-teal-dark text-white rounded-full py-8 px-12 text-xl font-bold shadow-xl shadow-teal/20 transition-all hover:scale-[1.02]" asChild>
-                        <a href="#book-appointment">
+                        <a href="tel:6238467597">
                           Book Now
                           <ArrowRight className="ml-3 h-6 w-6" />
                         </a>
@@ -129,10 +129,12 @@ export default function ServicesPage() {
               Join thousands of women in the Phoenix Valley who trust Arizona Women Specialists for their lifelong care.
             </p>
             <div className="flex flex-col sm:flex-row gap-8 w-full max-w-2xl">
-              <Button className="flex-1 bg-teal hover:bg-teal-dark text-white rounded-full py-10 px-12 text-2xl font-bold border-none shadow-2xl shadow-teal/40">
-                Schedule Now
+              <Button className="flex-1 bg-teal hover:bg-teal-dark text-white rounded-full py-10 px-12 text-2xl font-bold border-none shadow-2xl shadow-teal/40" asChild>
+                <a href="tel:6238467597">
+                  Schedule Now
+                </a>
               </Button>
-              <Button variant="outline" className="flex-1 rounded-full py-10 px-12 text-2xl font-bold border-2 border-white/20 text-white hover:bg-white hover:text-teal-dark transition-all" asChild>
+              <Button variant="outline" className="flex-1 rounded-full py-10 px-12 text-2xl font-bold border-2 border-white/20 bg-white text-teal-dark hover:bg-white hover:text-teal-dark transition-all" asChild>
                 <a href="tel:6238467597">
                   Call (623) 846-7597
                 </a>

@@ -7,17 +7,9 @@ import Link from "next/link"
 
 const posts = [
   {
-    title: "Understanding Different Types of Birth Control",
-    excerpt: "Exploring the various options available for contraception and which one might be right for your lifestyle.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173bdd9962a?auto=format&fit=crop&q=80&w=600",
-    date: "Mar 15, 2026",
-    author: "Dr. Maria Rodriguez",
-    category: "Family Planning",
-  },
-  {
     title: "What to Expect During Your First Prenatal Visit",
     excerpt: "A comprehensive guide to your initial appointment and how we support your pregnancy journey.",
-    image: "https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&q=80&w=600",
+    image: "/images/prenatal-visit.jpg",
     date: "Mar 10, 2026",
     author: "Dr. Sarah Johnson",
     category: "Pregnancy Care",
@@ -25,7 +17,7 @@ const posts = [
   {
     title: "The Benefits of GLP-1 for Medical Weight Loss",
     excerpt: "How modern medications are revolutionizing weight management under medical supervision.",
-    image: "https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&q=80&w=600",
+    image: "/images/weight-loss-medical.jpg",
     date: "Mar 5, 2026",
     author: "Medical Director",
     category: "Weight Loss",

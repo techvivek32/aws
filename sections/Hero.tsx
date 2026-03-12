@@ -53,12 +53,12 @@ export function Hero() {
             
             <div className="flex flex-col sm:flex-row gap-6 pt-6">
               <Button className="bg-teal hover:bg-teal-dark text-white rounded-full py-10 px-12 text-2xl font-black shadow-2xl shadow-teal/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]" asChild>
-                <a href="#book-appointment">
+                <a href="tel:6238467597">
                   Book Your Visit
                   <ArrowRight className="ml-3 h-8 w-8" />
                 </a>
               </Button>
-              <Button variant="outline" className="rounded-full py-10 px-12 text-2xl font-black border-4 border-teal/20 text-teal hover:bg-teal/5 transition-all duration-300 bg-white/50 backdrop-blur-sm shadow-xl" asChild>
+              <Button variant="outline" className="rounded-full py-10 px-12 text-2xl font-black border-4 border-teal/20 text-teal-dark bg-white hover:bg-teal hover:text-white transition-all duration-300 shadow-xl" asChild>
                 <a href={`tel:${settings.phoneNumber.replace(/\D/g, '')}`}>
                   <Phone className="mr-3 h-6 w-6" />
                   Call Clinic
@@ -88,16 +88,13 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.2 }}
             className="relative h-[500px] lg:h-[700px] w-full"
           >
-            <div className="absolute inset-0 bg-teal/10 rounded-[4rem] -rotate-3 scale-105"></div>
-            <div className="absolute inset-0 bg-teal-dark/30 rounded-[4rem] rotate-3 scale-105"></div>
-            <div className="relative h-full w-full rounded-[4rem] overflow-hidden medical-shadow border-8 border-white bg-teal/5">
+            <div className="relative h-full w-full rounded-[4rem] overflow-hidden medical-shadow border-8 border-white bg-gradient-to-br from-teal/20 to-magenta/20">
               <img 
-                src="https://images.unsplash.com/photo-1559839734-2b71ce190291?auto=format&fit=crop&q=80&w=1200" 
-                alt="Expert Women's Care"
+                src="/images/hero-doctor.jpg" 
+                alt="Expert Women's Care - Doctor consulting with patient"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="eager"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-teal/40 via-transparent to-transparent"></div>
               
               <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-8 rounded-3xl border border-teal/20 shadow-2xl z-20">
                 <div className="flex items-center gap-6 mb-4">

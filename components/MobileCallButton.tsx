@@ -32,7 +32,7 @@ export function MobileCallButton() {
         className="flex-1 bg-white text-primary border-teal rounded-full py-7 shadow-2xl hover:bg-primary/5 flex items-center justify-center gap-3 text-lg font-bold"
         asChild
       >
-        <a href="#book-appointment">
+        <a href="tel:6238467597">
           <Calendar className="h-6 w-6" />
           Book
         </a>

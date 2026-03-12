@@ -1,0 +1,59 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="medicalBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F5E9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C8E6C9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A5D6A7;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="pillGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#66BB6A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#43A047;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#medicalBg)"/>
+  
+  <!-- Decorative medical elements -->
+  <circle cx="120" cy="100" r="60" fill="#4CAF50" opacity="0.1"/>
+  <circle cx="680" cy="400" r="80" fill="#4CAF50" opacity="0.08"/>
+  <circle cx="700" cy="120" r="50" fill="#66BB6A" opacity="0.12"/>
+  
+  <!-- Medical consultation scene -->
+  <g transform="translate(200, 100)">
+    <!-- Doctor figure -->
+    <circle cx="100" cy="80" r="35" fill="#339999"/>
+    <path d="M 100 115 L 100 200 M 70 150 L 130 150 M 100 200 L 70 260 M 100 200 L 130 260" stroke="#339999" stroke-width="12" stroke-linecap="round"/>
+    
+    <!-- Patient figure -->
+    <circle cx="300" cy="80" r="35" fill="#7986CB"/>
+    <path d="M 300 115 L 300 200 M 270 150 L 330 150 M 300 200 L 270 260 M 300 200 L 330 260" stroke="#7986CB" stroke-width="12" stroke-linecap="round"/>
+    
+    <!-- Medical clipboard between them -->
+    <rect x="170" y="140" width="60" height="90" rx="5" fill="white" stroke="#339999" stroke-width="3"/>
+    <rect x="185" y="135" width="30" height="10" rx="5" fill="#339999"/>
+    <line x1="180" y1="160" x2="220" y2="160" stroke="#339999" stroke-width="2"/>
+    <line x1="180" y1="175" x2="220" y2="175" stroke="#339999" stroke-width="2"/>
+    <line x1="180" y1="190" x2="220" y2="190" stroke="#339999" stroke-width="2"/>
+    <line x1="180" y1="205" x2="220" y2="205" stroke="#339999" stroke-width="2"/>
+    
+    <!-- Pills illustration -->
+    <g transform="translate(-50, 50)">
+      <ellipse cx="50" cy="300" rx="20" ry="30" fill="url(#pillGrad)"/>
+      <ellipse cx="90" cy="300" rx="20" ry="30" fill="#7986CB"/>
+      <ellipse cx="130" cy="300" rx="20" ry="30" fill="#EC407A"/>
+      <ellipse cx="170" cy="300" rx="20" ry="30" fill="url(#pillGrad)"/>
+    </g>
+    
+    <!-- Medical cross -->
+    <g transform="translate(320, 140)">
+      <rect x="15" y="0" width="10" height="40" fill="#339999" rx="2"/>
+      <rect x="0" y="15" width="40" height="10" fill="#339999" rx="2"/>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="460" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2E7D32" text-anchor="middle">
+    Family Planning &amp; Birth Control Options
+  </text>
+</svg>

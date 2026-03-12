@@ -1,0 +1,40 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="prenatalBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFE0B2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#prenatalBg)"/>
+  
+  <circle cx="80" cy="80" r="50" fill="#FF6B9D" opacity="0.1"/>
+  <circle cx="520" cy="320" r="60" fill="#FF6B9D" opacity="0.08"/>
+  
+  <!-- Pregnant woman silhouette -->
+  <g transform="translate(200, 100)">
+    <circle cx="50" cy="30" r="25" fill="#FF6B9D"/>
+    <ellipse cx="50" cy="90" rx="40" ry="50" fill="#FF6B9D"/>
+    <circle cx="50" cy="90" r="30" fill="#FFB3C1" opacity="0.6"/>
+    <path d="M 50 140 L 30 200 M 50 140 L 70 200" stroke="#FF6B9D" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 20 80 L 50 80 M 50 80 L 80 80" stroke="#FF6B9D" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Heart with heartbeat -->
+  <g transform="translate(350, 150)">
+    <path d="M 50 30 C 50 15, 65 10, 75 20 C 85 10, 100 15, 100 30 C 100 50, 75 70, 50 85 C 25 70, 0 50, 0 30 C 0 15, 15 10, 25 20 C 35 10, 50 15, 50 30 Z" fill="#FF6B9D"/>
+    <path d="M -30 50 L -10 50 L 0 40 L 10 60 L 20 50 L 40 50" stroke="#FF6B9D" stroke-width="4" fill="none"/>
+  </g>
+  
+  <!-- Medical clipboard -->
+  <g transform="translate(100, 250)">
+    <rect width="60" height="80" rx="5" fill="white" stroke="#FF6B9D" stroke-width="2"/>
+    <rect x="15" y="-5" width="30" height="8" rx="4" fill="#FF6B9D"/>
+    <line x1="10" y1="20" x2="50" y2="20" stroke="#FF6B9D" stroke-width="2"/>
+    <line x1="10" y1="35" x2="50" y2="35" stroke="#FF6B9D" stroke-width="2"/>
+    <line x1="10" y1="50" x2="50" y2="50" stroke="#FF6B9D" stroke-width="2"/>
+  </g>
+  
+  <text x="300" y="380" font-family="Arial" font-size="24" font-weight="bold" fill="#D81B60" text-anchor="middle">
+    Prenatal Care
+  </text>
+</svg>

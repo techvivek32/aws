@@ -56,14 +56,14 @@ export default function SettingsPage() {
   return (
     <div className="max-w-4xl mx-auto">
       <Card className="rounded-[3rem] border-none medical-shadow overflow-hidden">
-        <CardHeader className="bg-accent text-white p-10">
+        <CardHeader className="bg-teal text-white p-10">
           <div className="flex items-center gap-4">
             <div className="h-12 w-12 rounded-2xl bg-white/20 flex items-center justify-center">
               <Settings className="h-6 w-6 text-white" />
             </div>
             <div>
-              <CardTitle className="text-2xl font-black italic">General Settings</CardTitle>
-              <p className="text-white/60 font-medium">Update your clinic's contact information</p>
+              <CardTitle className="text-2xl font-black">General Settings</CardTitle>
+              <p className="text-white/80 font-medium">Update your clinic's contact information</p>
             </div>
           </div>
         </CardHeader>

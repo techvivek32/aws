@@ -106,7 +106,7 @@ export default function WeightLossPage() {
               
               <div className="flex flex-col sm:flex-row gap-6 w-full max-w-lg">
                 <Button className="flex-1 bg-teal hover:bg-teal-dark text-white rounded-full py-10 px-12 text-2xl font-black shadow-2xl shadow-teal/30" asChild>
-                  <a href="#book-appointment">Start My Plan</a>
+                  <a href="tel:6238467597">Start My Plan</a>
                 </Button>
                 <Button variant="outline" className="flex-1 rounded-full py-10 px-12 text-2xl font-black border-4 border-teal/30 text-teal hover:bg-teal hover:text-white transition-all" asChild>
                   <a href="#how-it-works">How it works</a>
@@ -187,55 +187,56 @@ export default function WeightLossPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="relative w-full max-w-5xl bg-primary/5 rounded-[4rem] overflow-hidden border-8 border-white medical-shadow"
+                className="relative w-full max-w-6xl bg-white rounded-[3rem] overflow-hidden medical-shadow border border-teal/10"
               >
-                <div className="grid lg:grid-cols-2 items-center">
-                  <div className="relative h-[400px] lg:h-[700px] overflow-hidden">
+                <div className="grid lg:grid-cols-5 items-stretch">
+                  {/* Image Section */}
+                  <div className="lg:col-span-2 relative h-[350px] lg:h-auto overflow-hidden bg-gradient-to-br from-teal/5 to-teal/10">
                     <img 
                       src={t.image} 
                       alt={t.title}
                       className="absolute inset-0 w-full h-full object-cover"
                     />
-                    <div className="absolute top-10 left-10">
-                      <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-teal/10">
-                        <div className="text-3xl font-black text-teal">{t.price}</div>
-                        <div className="text-sm font-bold text-teal-dark/70">{t.priceDetail}</div>
+                    <div className="absolute top-8 left-8">
+                      <div className="bg-teal text-white rounded-2xl px-6 py-3 shadow-xl">
+                        <div className="text-xs font-bold uppercase tracking-wider opacity-90">Starting at</div>
+                        <div className="text-3xl font-black">{t.price}</div>
                       </div>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/5"></div>
                   </div>
                   
-                  <div className="p-12 lg:p-20 flex flex-col gap-10">
-                    <div className="inline-flex items-center gap-2 bg-teal text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] self-start shadow-xl">
-                      Highly Recommended
+                  {/* Content Section */}
+                  <div className="lg:col-span-3 p-10 lg:p-14 flex flex-col">
+                    <div className="inline-flex items-center gap-2 bg-teal/10 text-teal px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider self-start mb-6">
+                      ⭐ Highly Recommended
                     </div>
                     
-                    <h3 className="text-5xl md:text-7xl font-black text-primary tracking-tighter leading-none">{t.title}</h3>
+                    <h3 className="text-4xl md:text-5xl font-black text-teal-dark mb-4 leading-tight">{t.title}</h3>
                     
-                    <div className="flex flex-col gap-3">
-                      <div className="text-4xl font-black text-teal-dark">{t.price}</div>
-                      <div className="text-2xl font-bold text-teal-dark/70">{t.priceDetail}</div>
-                    </div>
-                    
-                    <p className="text-2xl text-teal-dark font-black leading-relaxed">
+                    <p className="text-lg text-teal-dark/80 font-semibold leading-relaxed mb-6">
                       {t.subtitle}. Our physician-supervised program uses custom-blended GLP-1 therapy tailored specifically to your metabolic profile.
                     </p>
                     
-                    <div className="grid gap-6 py-4">
+                    <div className="bg-teal/5 rounded-2xl p-6 mb-6">
+                      <div className="text-sm font-bold text-teal-dark/70 mb-2">Investment</div>
+                      <div className="text-2xl font-black text-teal">{t.priceDetail}</div>
+                    </div>
+                    
+                    <div className="grid gap-4 mb-8">
                       {t.features.map((feature, fIdx) => (
-                        <div key={fIdx} className="flex items-center gap-5">
-                          <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-teal">
-                            <Check className="h-6 w-6 stroke-[4]" />
+                        <div key={fIdx} className="flex items-center gap-3">
+                          <div className="h-7 w-7 rounded-full bg-teal/10 flex items-center justify-center shrink-0">
+                            <Check className="h-4 w-4 text-teal stroke-[3]" />
                           </div>
-                          <span className="text-2xl font-black text-teal-dark tracking-tight">{feature}</span>
+                          <span className="text-base font-semibold text-teal-dark">{feature}</span>
                         </div>
                       ))}
                     </div>
 
-                    <Button className="bg-teal hover:bg-teal-dark text-white rounded-full py-10 px-14 text-3xl font-black shadow-2xl shadow-teal/30 transition-all hover:scale-[1.02] self-start mt-4" asChild>
-                      <a href="#book-appointment">
+                    <Button className="bg-teal hover:bg-teal-dark text-white rounded-full py-6 px-10 text-xl font-bold shadow-xl shadow-teal/20 transition-all hover:scale-[1.02] self-start mt-auto" asChild>
+                      <a href="tel:6238467597">
                         Get Started Now
-                        <ArrowRight className="ml-3 h-10 w-10" />
+                        <ArrowRight className="ml-2 h-6 w-6" />
                       </a>
                     </Button>
                   </div>
@@ -293,9 +294,9 @@ export default function WeightLossPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-6 w-full max-w-lg">
                 <Button className="flex-1 bg-teal hover:bg-teal-dark text-white rounded-full py-10 px-12 text-2xl font-bold border-none" asChild>
-                  <a href="#book-appointment">Get Started</a>
+                  <a href="tel:6238467597">Get Started</a>
                 </Button>
-                <Button variant="outline" className="flex-1 rounded-full py-10 px-12 text-2xl font-bold border-4 border-white/30 text-white hover:bg-white hover:text-teal-dark transition-all" asChild>
+                <Button variant="outline" className="flex-1 rounded-full py-10 px-12 text-2xl font-bold border-4 border-white/30 bg-white text-teal-dark hover:bg-teal hover:text-white transition-all" asChild>
                   <a href="tel:6238467597">Contact Specialist</a>
                 </Button>
               </div>

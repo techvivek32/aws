@@ -110,9 +110,9 @@ export default function AdminServicesPage() {
 
       {isAdding && (
         <Card className="rounded-[3rem] border-none medical-shadow overflow-hidden">
-          <CardHeader className="bg-accent text-white p-10 flex flex-row justify-between items-center">
-            <CardTitle className="text-2xl font-black italic">{editingId ? 'Edit Service' : 'Add New Service'}</CardTitle>
-            <button onClick={() => setIsAdding(false)} className="p-2 hover:bg-white/10 rounded-full">
+          <CardHeader className="bg-teal text-white p-10 flex flex-row justify-between items-center">
+            <CardTitle className="text-2xl font-black">{editingId ? 'Edit Service' : 'Add New Service'}</CardTitle>
+            <button onClick={() => setIsAdding(false)} className="p-2 hover:bg-white/10 rounded-full transition-colors">
               <X className="h-6 w-6" />
             </button>
           </CardHeader>

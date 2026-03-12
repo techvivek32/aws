@@ -66,7 +66,7 @@ export default function SingleServicePage() {
               
               <div className="pt-10 flex flex-col sm:flex-row gap-6">
                 <Button className="bg-primary hover:bg-primary/90 rounded-full py-10 px-12 text-2xl font-bold shadow-2xl shadow-primary/30" asChild>
-                  <a href="#book-appointment">Book Now</a>
+                  <a href="tel:6238467597">Book Now</a>
                 </Button>
                 {service.price && (
                   <div className="flex flex-col justify-center">
@@ -119,7 +119,7 @@ export default function SingleServicePage() {
         <div className="container px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-black text-accent mb-10 leading-[1.1] tracking-tighter italic">Ready to experience <br /> <span className="text-primary underline decoration-primary/20 underline-offset-8">premium care</span>?</h2>
           <Button className="bg-primary hover:bg-primary/90 rounded-full py-10 px-16 text-2xl font-bold shadow-2xl shadow-primary/30 border-none group" asChild>
-             <a href="#book-appointment">
+             <a href="tel:6238467597">
                 Schedule {service.title}
                 <ArrowLeft className="ml-3 h-7 w-7 rotate-180 group-hover:translate-x-2 transition-transform" />
              </a>

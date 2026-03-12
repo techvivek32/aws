@@ -1,0 +1,52 @@
+<svg width="1200" height="1400" viewBox="0 0 1200 1400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F2F1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#B2DFDB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#80CBC4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#339999;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#267373;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="1400" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="200" cy="200" r="150" fill="#339999" opacity="0.1"/>
+  <circle cx="1000" cy="300" r="200" fill="#C2185B" opacity="0.08"/>
+  <circle cx="600" cy="1200" r="180" fill="#339999" opacity="0.12"/>
+  
+  <!-- Medical cross icon -->
+  <g transform="translate(500, 550)">
+    <circle cx="100" cy="100" r="120" fill="url(#accentGradient)" opacity="0.9"/>
+    <rect x="80" y="40" width="40" height="120" fill="white" rx="8"/>
+    <rect x="40" y="80" width="120" height="40" fill="white" rx="8"/>
+  </g>
+  
+  <!-- Stethoscope illustration -->
+  <g transform="translate(300, 400)" opacity="0.15">
+    <path d="M 50 100 Q 50 50, 100 50 Q 150 50, 150 100" stroke="#339999" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <circle cx="50" cy="100" r="30" fill="#339999"/>
+    <circle cx="150" cy="100" r="30" fill="#339999"/>
+    <path d="M 100 50 L 100 200" stroke="#339999" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="100" cy="220" r="35" fill="#339999"/>
+    <circle cx="100" cy="220" r="25" fill="white"/>
+  </g>
+  
+  <!-- Heart icon -->
+  <g transform="translate(750, 900)" opacity="0.12">
+    <path d="M 60 30 C 60 15, 75 5, 90 15 C 105 5, 120 15, 120 30 C 120 50, 90 75, 90 75 C 90 75, 60 50, 60 30 Z" fill="#C2185B"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="600" y="750" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#267373" text-anchor="middle">
+    Arizona Women Specialists
+  </text>
+  <text x="600" y="810" font-family="Arial, sans-serif" font-size="32" fill="#339999" text-anchor="middle">
+    Expert Women's Healthcare
+  </text>
+</svg>

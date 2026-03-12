@@ -1,0 +1,30 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="familyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E1F5FE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#81D4FA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#familyGradient)"/>
+  <circle cx="180" cy="120" r="65" fill="#339999" opacity="0.15"/>
+  <circle cx="620" cy="280" r="85" fill="#339999" opacity="0.12"/>
+  
+  <!-- Family figures -->
+  <g transform="translate(280, 120)">
+    <!-- Adult 1 -->
+    <circle cx="60" cy="50" r="20" fill="#339999"/>
+    <path d="M 60 70 L 60 120 M 40 90 L 80 90 M 60 120 L 40 160 M 60 120 L 80 160" stroke="#339999" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Adult 2 -->
+    <circle cx="140" cy="50" r="20" fill="#339999"/>
+    <path d="M 140 70 L 140 120 M 120 90 L 160 90 M 140 120 L 120 160 M 140 120 L 160 160" stroke="#339999" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Child -->
+    <circle cx="100" cy="90" r="15" fill="#339999"/>
+    <path d="M 100 105 L 100 140 M 85 120 L 115 120 M 100 140 L 85 165 M 100 140 L 115 165" stroke="#339999" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  
+  <text x="400" y="330" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#267373" text-anchor="middle">
+    Family Planning
+  </text>
+</svg>

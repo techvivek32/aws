@@ -108,12 +108,28 @@ export default function BlogPage() {
                   viewport={{ once: true }}
                   className="bg-white rounded-[3rem] overflow-hidden medical-shadow border border-primary/5 flex flex-col group h-full"
                 >
-                  <div className="relative overflow-hidden aspect-[16/10]">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
+                  <div className="relative overflow-hidden aspect-[16/10] bg-gradient-to-br from-teal/10 to-magenta/10">
+                    {post.image ? (
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        onError={(e) => {
+                          console.error('Failed to load image:', post.image);
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.parentElement!.style.background = 'linear-gradient(135deg, #E0F2F1 0%, #B2DFDB 100%)';
+                        }}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-teal/20 to-magenta/20">
+                        <div className="text-teal/30">
+                          <svg width="100" height="100" viewBox="0 0 100 100" fill="currentColor">
+                            <circle cx="50" cy="35" r="15"/>
+                            <path d="M 50 50 L 50 75 M 35 60 L 65 60"/>
+                          </svg>
+                        </div>
+                      </div>
+                    )}
                     <div className="absolute top-8 left-8 bg-teal text-white text-xs font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full shadow-lg">
                       {post.category}
                     </div>

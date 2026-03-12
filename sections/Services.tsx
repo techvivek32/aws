@@ -64,8 +64,28 @@ export function Services() {
                 whileHover={{ y: -8 }}
                 className="bg-white p-10 rounded-[2.5rem] medical-shadow border border-teal/5 group relative overflow-hidden transition-all duration-300"
               >
-                <div className="h-48 -mx-12 -mt-12 mb-10 overflow-hidden relative">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+                <div className="h-48 -mx-12 -mt-12 mb-10 overflow-hidden relative bg-gradient-to-br from-teal/10 to-magenta/10">
+                  {service.image ? (
+                    <img 
+                      src={service.image} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                      loading="lazy"
+                      onError={(e) => {
+                        console.error('Image failed to load:', service.image);
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="text-teal/30">
+                        {service.category === 'Medical Weight Loss' && <Heart className="h-20 w-20" />}
+                        {service.category === 'Specialized Care' && <Stethoscope className="h-20 w-20" />}
+                        {service.category === 'Wellness' && <Users className="h-20 w-20" />}
+                        {!['Medical Weight Loss', 'Specialized Care', 'Wellness'].includes(service.category) && <ClipboardCheck className="h-20 w-20" />}
+                      </div>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent"></div>
                 </div>
 

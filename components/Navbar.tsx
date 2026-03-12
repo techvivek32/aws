@@ -47,23 +47,12 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur-md">
       <div className="container flex h-28 items-center justify-between">
         <div className="flex items-center gap-12">
-          <Link href="/" className="flex items-center gap-4 group">
-            <div className="relative h-16 w-12 flex items-center justify-center">
-              {/* Simplified Female Silhouette Icon matching the logo */}
-              <svg viewBox="0 0 100 200" className="h-full w-full text-primary fill-none stroke-current stroke-[4]" strokeLinecap="round">
-                <circle cx="50" cy="30" r="15" />
-                <path d="M50 45 C30 45 20 70 20 100 C20 150 40 180 50 190 C60 180 80 150 80 100 C80 70 70 45 50 45 Z" />
-                <path d="M30 70 C40 65 60 65 70 70" />
-              </svg>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl md:text-3xl font-light tracking-tight text-[#b03a7e] font-serif leading-none mb-1">
-                Arizona Women <span className="font-normal">Specialists</span>
-              </span>
-              <span className="text-[10px] font-black tracking-[0.4em] text-teal-dark uppercase border-t border-accent-foreground/10 pt-1">
-                GYNECOLOGY & WOMEN'S CARE
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <img 
+              src="/images/logo.png" 
+              alt="Arizona Women Specialists" 
+              className="h-24 md:h-28 w-auto object-contain"
+            />
           </Link>
 
           <NavigationMenu className="hidden lg:flex">
@@ -134,7 +123,7 @@ export function Navbar() {
             </a>
           </div>
           <Button className="hidden sm:flex bg-teal hover:bg-teal-dark rounded-full px-8 py-6 text-lg font-bold shadow-lg shadow-teal/20" asChild>
-            <a href="#book-appointment">Book Now</a>
+            <a href="tel:6238467597">Book Now</a>
           </Button>
           
           <button 
@@ -173,7 +162,7 @@ export function Navbar() {
               <a href={`tel:${phone.replace(/\D/g, '')}`}>{phone}</a>
             </div>
             <Button className="w-full bg-teal rounded-full py-7 text-xl font-bold" asChild onClick={() => setIsOpen(false)}>
-              <a href="#book-appointment">Book Now</a>
+              <a href="tel:6238467597">Book Now</a>
             </Button>
           </div>
         </motion.div>

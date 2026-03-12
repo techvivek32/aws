@@ -1,0 +1,25 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gyneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F3E5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CE93D8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#gyneGradient)"/>
+  <circle cx="150" cy="200" r="70" fill="#C2185B" opacity="0.15"/>
+  <circle cx="650" cy="150" r="90" fill="#C2185B" opacity="0.12"/>
+  
+  <!-- Stethoscope -->
+  <g transform="translate(300, 120)">
+    <path d="M 80 80 Q 80 40, 120 40 Q 160 40, 160 80" stroke="#C2185B" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <circle cx="80" cy="80" r="25" fill="#C2185B"/>
+    <circle cx="160" cy="80" r="25" fill="#C2185B"/>
+    <path d="M 120 40 L 120 160" stroke="#C2185B" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="120" cy="180" r="30" fill="#C2185B"/>
+    <circle cx="120" cy="180" r="20" fill="white"/>
+  </g>
+  
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#C2185B" text-anchor="middle">
+    Gynecology
+  </text>
+</svg>

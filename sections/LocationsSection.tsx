@@ -88,8 +88,8 @@ export function LocationsSection() {
                     Get Directions
                     <Navigation className="ml-3 h-6 w-6" />
                   </Button>
-                  <Button variant="outline" className="rounded-full py-8 px-12 text-xl font-bold border-2 border-primary/20 text-primary hover:bg-primary/5 transition-all duration-300 flex-1">
-                    Book Now
+                  <Button variant="outline" className="rounded-full py-8 px-12 text-xl font-bold border-2 border-primary/20 text-primary hover:bg-primary/5 transition-all duration-300 flex-1" asChild>
+                    <a href="tel:6238467597">Book Now</a>
                   </Button>
                 </div>
               </div>

@@ -1,0 +1,46 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glp1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F2F1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B2DFDB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#glp1Grad)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="140" cy="130" r="75" fill="#00897B" opacity="0.1"/>
+  <circle cx="660" cy="370" r="95" fill="#00897B" opacity="0.08"/>
+  <circle cx="700" cy="120" r="55" fill="#26A69A" opacity="0.12"/>
+  
+  <!-- Weight loss and medical illustration -->
+  <g transform="translate(280, 140)">
+    <!-- Scale -->
+    <rect x="60" y="120" width="120" height="25" rx="12" fill="#00897B"/>
+    <rect x="105" y="95" width="30" height="50" fill="#00897B"/>
+    <circle cx="120" cy="85" r="20" fill="#00897B"/>
+    <path d="M 70 145 L 50 170 L 90 170 Z" fill="#00897B"/>
+    <path d="M 170 145 L 150 170 L 190 170 Z" fill="#00897B"/>
+    
+    <!-- Syringe/injection -->
+    <g transform="translate(-80, 0)">
+      <rect x="50" y="80" width="15" height="80" rx="7" fill="#26A69A"/>
+      <rect x="52" y="60" width="11" height="25" fill="#4DB6AC"/>
+      <circle cx="57.5" cy="55" r="8" fill="#26A69A"/>
+      <rect x="55" y="160" width="5" height="30" fill="#00897B"/>
+      <polygon points="57.5,190 52,195 63,195" fill="#00897B"/>
+    </g>
+    
+    <!-- Downward arrow (weight loss) -->
+    <g transform="translate(180, 40)">
+      <rect x="15" y="0" width="10" height="80" fill="#00897B"/>
+      <polygon points="20,80 0,100 40,100" fill="#00897B"/>
+    </g>
+    
+    <!-- Heart rate line -->
+    <path d="M -50 200 L -20 200 L -10 180 L 0 220 L 10 200 L 40 200 L 50 180 L 60 200 L 90 200" stroke="#00897B" stroke-width="4" fill="none" opacity="0.6"/>
+  </g>
+  
+  <text x="400" y="450" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#00695C" text-anchor="middle">
+    GLP-1 Weight Loss Program
+  </text>
+</svg>

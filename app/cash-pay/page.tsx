@@ -56,17 +56,17 @@ export default function CashPayPage() {
   return (
     <div className="pt-6">
       {/* Hero Section */}
-      <section className="bg-secondary/30 py-16 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-teal/5 to-secondary/30 py-20 relative overflow-hidden">
         <div className="container px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-teal-dark mb-8 leading-tight tracking-tight">
-              Transparent <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Cash Pay Pricing</span>
+            <h1 className="text-5xl md:text-7xl font-black text-teal-dark mb-8 leading-tight tracking-tight">
+              Transparent <span className="text-teal italic underline decoration-teal/20 underline-offset-8">Cash Pay Pricing</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-teal-dark/80 max-w-3xl mx-auto leading-relaxed font-semibold">
               High-quality healthcare shouldn't be a mystery. We offer clear, upfront pricing for patients without insurance or those who prefer to pay out-of-pocket.
             </p>
           </motion.div>
@@ -74,9 +74,9 @@ export default function CashPayPage() {
       </section>
 
       {/* Pricing Grid */}
-      <section className="py-24">
+      <section className="py-24 bg-white">
         <div className="container px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pricingCategories.map((category, idx) => (
               <motion.div
                 key={idx}
@@ -84,22 +84,22 @@ export default function CashPayPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-[3rem] p-10 medical-shadow border border-primary/5 flex flex-col h-full"
+                className="bg-white rounded-3xl p-8 medical-shadow border-2 border-teal/10 flex flex-col h-full hover:border-teal/30 transition-all"
               >
-                <div className="w-14 h-14 rounded-2xl bg-teal/10 text-teal flex items-center justify-center mb-8">
+                <div className="w-14 h-14 rounded-2xl bg-teal/10 text-teal flex items-center justify-center mb-6">
                   <category.icon className="h-7 w-7" />
                 </div>
                 
-                <h2 className="text-3xl font-bold text-teal-dark mb-8">{category.title}</h2>
+                <h2 className="text-2xl font-black text-teal-dark mb-6">{category.title}</h2>
                 
-                <div className="flex flex-col gap-8 flex-1">
+                <div className="flex flex-col gap-6 flex-1">
                   {category.items.map((item, iIdx) => (
-                    <div key={iIdx} className="flex flex-col gap-2 pb-6 border-b border-secondary/50 last:border-0 last:pb-0">
-                      <div className="flex justify-between items-center">
-                        <h3 className="text-xl font-bold text-teal-dark">{item.name}</h3>
-                        <span className="text-2xl font-black text-teal">{item.price}</span>
+                    <div key={iIdx} className="flex flex-col gap-2 pb-6 border-b border-teal/10 last:border-0 last:pb-0">
+                      <div className="flex justify-between items-start gap-3">
+                        <h3 className="text-base font-bold text-teal-dark leading-tight">{item.name}</h3>
+                        <span className="text-xl font-black text-teal shrink-0">{item.price}</span>
                       </div>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-teal-dark/70 leading-relaxed font-medium">
                         {item.description}
                       </p>
                     </div>
@@ -109,14 +109,14 @@ export default function CashPayPage() {
             ))}
           </div>
           
-          <div className="mt-20 bg-accent text-white rounded-[3rem] p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="mt-16 bg-teal text-white rounded-3xl p-10 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl">
             <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 italic underline decoration-primary/50 underline-offset-8">Don't see what you're looking for?</h2>
-              <p className="text-xl text-white/70 leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-black mb-4">Don't see what you're looking for?</h2>
+              <p className="text-lg text-white/90 leading-relaxed font-medium">
                 Our team is happy to provide pricing for other services, procedures, and laboratory tests over the phone. We believe in financial transparency for all our patients.
               </p>
             </div>
-            <Button className="bg-teal hover:bg-teal-dark rounded-full py-8 px-12 text-xl font-bold border-none w-full lg:w-auto" asChild>
+            <Button className="bg-white text-teal hover:bg-white/90 rounded-full py-6 px-10 text-lg font-bold border-none w-full lg:w-auto shadow-lg" asChild>
               <a href="tel:6238467597">
                 Call (623) 846-7597
               </a>
@@ -126,7 +126,7 @@ export default function CashPayPage() {
       </section>
 
       {/* Trust Points */}
-      <section className="py-24 bg-secondary/30">
+      <section className="py-20 bg-gradient-to-br from-teal/5 to-secondary/30">
         <div className="container px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -135,12 +135,12 @@ export default function CashPayPage() {
               { icon: DollarSign, title: "Cost-Effective", text: "Premium care at competitive rates for the Phoenix area." },
               { icon: Calendar, title: "Same-Day Pay", text: "Payment is collected at the time of service for your convenience." },
             ].map((point, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center gap-4">
-                <div className="h-16 w-16 rounded-full bg-white flex items-center justify-center text-teal medical-shadow">
+              <div key={idx} className="flex flex-col items-center text-center gap-4 p-6 bg-white rounded-2xl shadow-lg">
+                <div className="h-16 w-16 rounded-full bg-teal/10 flex items-center justify-center text-teal">
                   <point.icon className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-bold text-teal-dark">{point.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <h3 className="text-xl font-black text-teal-dark">{point.title}</h3>
+                <p className="text-teal-dark/70 leading-relaxed font-medium">
                   {point.text}
                 </p>
               </div>
@@ -150,14 +150,16 @@ export default function CashPayPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24">
+      <section className="py-20 bg-white">
         <div className="container px-4 text-center">
           <div className="max-w-4xl mx-auto flex flex-col items-center">
-            <h2 className="text-4xl md:text-6xl font-bold text-teal-dark mb-10 leading-tight">Ready to <span className="text-primary italic">book your visit</span>?</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-teal-dark mb-10 leading-tight">Ready to <span className="text-teal italic">book your visit</span>?</h2>
             <div className="flex flex-col sm:flex-row gap-6 w-full max-w-lg">
-              <Button className="flex-1 bg-teal hover:bg-teal-dark rounded-full py-8 px-10 text-xl font-bold shadow-xl shadow-teal/20 group">
-                Schedule Appointment
-                <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              <Button className="flex-1 bg-teal hover:bg-teal-dark text-white rounded-full py-8 px-10 text-xl font-bold shadow-xl shadow-teal/20 group" asChild>
+                <a href="tel:6238467597">
+                  Schedule Appointment
+                  <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </div>
           </div>

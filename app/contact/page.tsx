@@ -163,8 +163,8 @@ export default function ContactPage() {
                         Get Directions
                         <Navigation className="ml-2 h-5 w-5" />
                       </Button>
-                      <Button variant="outline" className="rounded-full py-8 px-10 text-xl font-bold border-2 border-accent text-teal-dark hover:bg-accent hover:text-white transition-all shadow-lg flex-1">
-                        Book Now
+                      <Button variant="outline" className="rounded-full py-8 px-10 text-xl font-bold border-2 border-accent text-teal-dark hover:bg-accent hover:text-white transition-all shadow-lg flex-1" asChild>
+                        <a href="tel:6238467597">Book Now</a>
                       </Button>
                     </div>
                   </div>

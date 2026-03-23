@@ -37,8 +37,8 @@ const pricingCategories = [
     title: "Imaging & Diagnostics",
     icon: ImageIcon,
     items: [
-      { name: "Diagnostic Ultrasound", price: "$75", description: "Pelvic or obstetric imaging." },
-      { name: "Pregnancy Confirmation", price: "FREE", description: "Initial pregnancy test (Walk-in available)." },
+      { name: "Diagnostic Ultrasound", price: "$75", description: "Pelvic and gynecological imaging." },
+      { name: "Annual Wellness Exam", price: "$100", description: "Comprehensive women's health screening." },
     ]
   },
   {

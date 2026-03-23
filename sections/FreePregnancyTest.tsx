@@ -57,7 +57,7 @@ export function FreePregnancyTest() {
                   </a>
                 </Button>
                 <Button variant="ghost" className="rounded-full py-8 px-12 text-lg font-bold text-teal hover:bg-teal/5 transition-all" asChild>
-                  <Link href="/services#pregnancy">Learn about pregnancy care from Julie Dent, a Nurse Practitioner.</Link>
+                  <Link href="/services">Learn about our comprehensive women's health services.</Link>
                 </Button>
               </div>
             </motion.div>
@@ -72,7 +72,7 @@ export function FreePregnancyTest() {
               <div className="relative rounded-[2.5rem] overflow-hidden medical-shadow border-4 border-white rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img 
                   src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&q=80&w=800" 
-                  alt="Pregnancy Test Support"
+                  alt="Free Testing Support"
                   className="w-full h-[500px] object-cover"
                 />
               </div>

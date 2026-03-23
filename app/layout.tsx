@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Arizona Women Specialists"
   },
   description: "Personalized women's care, gynecology, and doctor-supervised medical weight loss programs in Phoenix and Glendale, AZ.",
-  keywords: ["OBGYN Phoenix", "Women's Health Glendale", "Medical Weight Loss AZ", "Pregnancy Care Phoenix", "Gynecology Arizona"],
+  keywords: ["OBGYN Phoenix", "Women's Health Glendale", "Medical Weight Loss AZ", "Gynecology Phoenix", "Family Planning Arizona"],
   openGraph: {
     type: "website",
     locale: "en_US",

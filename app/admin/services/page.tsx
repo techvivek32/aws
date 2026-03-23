@@ -125,7 +125,7 @@ export default function AdminServicesPage() {
                     required
                     value={formData.title}
                     onChange={(e) => setFormData({...formData, title: e.target.value})}
-                    placeholder="e.g. Pregnancy Care"
+                    placeholder="e.g. Gynecology Services"
                     className="py-7 px-6 rounded-full border-primary/10"
                   />
                 </div>
@@ -135,7 +135,7 @@ export default function AdminServicesPage() {
                     required
                     value={formData.slug}
                     onChange={(e) => setFormData({...formData, slug: e.target.value})}
-                    placeholder="e.g. pregnancy"
+                    placeholder="e.g. gynecology-services"
                     className="py-7 px-6 rounded-full border-primary/10"
                   />
                 </div>

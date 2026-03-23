@@ -68,12 +68,6 @@ export default function SingleServicePage() {
                 <Button className="bg-primary hover:bg-primary/90 rounded-full py-10 px-12 text-2xl font-bold shadow-2xl shadow-primary/30" asChild>
                   <a href="tel:6238467597">Book Now</a>
                 </Button>
-                {service.price && (
-                  <div className="flex flex-col justify-center">
-                    <p className="text-sm font-black text-muted-foreground uppercase tracking-widest">Pricing starts at</p>
-                    <p className="text-3xl font-black text-accent">{service.price}</p>
-                  </div>
-                )}
               </div>
             </motion.div>
 

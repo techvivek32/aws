@@ -19,7 +19,7 @@ export default function AdminBlogPage() {
     content: "",
     image: "",
     category: "",
-    author: "Medical Director",
+    author: "",
     status: "published",
   })
 
@@ -62,7 +62,7 @@ export default function AdminBlogPage() {
       if (res.ok) {
         setIsAdding(false)
         setEditingId(null)
-        setFormData({ title: "", slug: "", excerpt: "", content: "", image: "", category: "", author: "Medical Director", status: "published" })
+        setFormData({ title: "", slug: "", excerpt: "", content: "", image: "", category: "", author: "", status: "published" })
         fetchPosts()
       }
     } catch (error) {
@@ -104,7 +104,7 @@ export default function AdminBlogPage() {
           onClick={() => {
             setIsAdding(true)
             setEditingId(null)
-            setFormData({ title: "", slug: "", excerpt: "", content: "", image: "", category: "", author: "Medical Director", status: "published" })
+            setFormData({ title: "", slug: "", excerpt: "", content: "", image: "", category: "", author: "", status: "published" })
           }}
           className="bg-teal hover:bg-teal-dark rounded-full px-8 py-6 text-lg font-bold shadow-lg"
         >

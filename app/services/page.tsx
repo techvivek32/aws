@@ -38,7 +38,7 @@ export default function ServicesPage() {
               Comprehensive <br /><span className="text-primary italic">Women's Care</span>
             </h1>
             <p className="text-xl md:text-3xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-medium">
-              From routine wellness exams to pregnancy care, we provide expert medical services with a personalized touch.
+              From routine wellness exams to comprehensive gynecological care, we provide expert medical services with a personalized touch.
             </p>
           </motion.div>
         </div>

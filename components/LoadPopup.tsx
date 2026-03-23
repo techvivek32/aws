@@ -49,7 +49,7 @@ export function LoadPopup() {
                     <div className="h-8 w-8 rounded-full bg-teal/10 flex items-center justify-center shrink-0">
                       <Check className="h-5 w-5 text-teal stroke-[3]" />
                     </div>
-                    <span>Free Pregnancy Test</span>
+                    <span>Comprehensive Gynecology</span>
                   </li>
                   <li className="flex items-center justify-center gap-3">
                     <div className="h-8 w-8 rounded-full bg-teal/10 flex items-center justify-center shrink-0">

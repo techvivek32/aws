@@ -95,21 +95,6 @@ export function Hero() {
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="eager"
               />
-              
-              <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-8 rounded-3xl border border-teal/20 shadow-2xl z-20">
-                <div className="flex items-center gap-6 mb-4">
-                  <div className="h-14 w-14 rounded-2xl bg-teal flex items-center justify-center text-white shadow-lg">
-                    <Award className="h-8 w-8" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-black text-teal tracking-tighter uppercase leading-none">Phoenix Valley's Choice</h3>
-                    <p className="text-sm font-black text-teal/80 italic">#1 Rated for Women's Wellness</p>
-                  </div>
-                </div>
-                <p className="text-lg font-black text-teal-dark leading-relaxed">
-                  "Expert care with a personalized touch. Arizona's trusted medical institution for over two decades."
-                </p>
-              </div>
             </div>
           </motion.div>
         </div>

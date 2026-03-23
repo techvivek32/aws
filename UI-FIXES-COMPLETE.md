@@ -26,12 +26,12 @@
 - **Blog posts**: Real medical/health images
 - **Services**: Professional healthcare images
 - **Weight Loss**: Treatment and medication images
-- **Free Pregnancy Test**: Supportive care images
+- **Free Women's Health Test**: Supportive care images
 - All placeholder SVGs replaced
 
 ### 5. Image URLs Used:
 - Hero: Female doctor consultation
-- Pregnancy Test: Supportive healthcare
+- Women's Health Test: Supportive healthcare
 - Weight Loss: Medical treatment
 - Blog: Various health topics
 - Services: Professional medical care

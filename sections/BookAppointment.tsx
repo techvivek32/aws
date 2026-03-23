@@ -140,7 +140,8 @@ export function BookAppointment() {
                       className="flex h-16 w-full items-center justify-between rounded-2xl border border-primary/10 bg-white px-8 py-2 text-lg font-medium ring-offset-background focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 medical-shadow appearance-none"
                     >
                       <option value="" disabled>Select a service</option>
-                      <option value="Pregnancy">Pregnancy Care</option>
+                      <option value="Gynecology">Gynecology Services</option>
+                      <option value="Family Planning">Family Planning Services</option>
                       <option value="Gynecology">Gynecology Services</option>
                       <option value="Weight Loss">Medical Weight Loss</option>
                       <option value="Ultrasound">Ultrasound Imaging</option>

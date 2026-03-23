@@ -24,18 +24,18 @@ const samplePosts = [
     content: "When it comes to birth control, there are many options available. From hormonal methods like pills and IUDs to barrier methods like condoms, each has its own benefits and considerations. This comprehensive guide will help you understand your options and make an informed decision with your healthcare provider.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
     category: "Family Planning",
-    author: "Dr. Maria Rodriguez",
+    author: "",
     status: "published",
     publishedAt: new Date("2026-03-15")
   },
   {
-    title: "What to Expect During Your First Prenatal Visit",
-    slug: "first-prenatal-visit-guide",
-    excerpt: "A comprehensive guide to your initial appointment and how we support your pregnancy journey.",
-    content: "Your first prenatal visit is an important milestone in your pregnancy journey. During this appointment, we'll review your medical history, perform initial tests, and discuss what to expect in the coming months. We'll also answer all your questions and create a personalized care plan for you and your baby.",
+    title: "Understanding Common Gynecological Conditions",
+    slug: "gynecological-conditions-guide",
+    excerpt: "A comprehensive guide to women's health issues and how we provide personalized treatment solutions.",
+    content: "Understanding your gynecological health is important for overall wellness. During your appointment, we'll review your medical history, perform necessary examinations, and discuss treatment options. We'll also answer all your questions and create a personalized care plan for your specific needs.",
     image: "https://images.unsplash.com/photo-1584362923647-481cf0653f0e?auto=format&fit=crop&q=80&w=800",
-    category: "Pregnancy Care",
-    author: "Dr. Sarah Johnson",
+    category: "Gynecology",
+    author: "",
     status: "published",
     publishedAt: new Date("2026-03-10")
   },
@@ -46,7 +46,7 @@ const samplePosts = [
     content: "GLP-1 medications like Ozempic, Wegovy, and Mounjaro have transformed medical weight loss. These medications work by regulating appetite and blood sugar levels, helping patients achieve sustainable weight loss when combined with lifestyle changes. Learn about how our medically supervised program can help you reach your goals.",
     image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
     category: "Weight Loss",
-    author: "Medical Director",
+    author: "",
     status: "published",
     publishedAt: new Date("2026-03-05")
   }

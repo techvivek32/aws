@@ -7,19 +7,19 @@ import Link from "next/link"
 
 const posts = [
   {
-    title: "What to Expect During Your First Prenatal Visit",
-    excerpt: "A comprehensive guide to your initial appointment and how we support your pregnancy journey.",
+    title: "Understanding Common Gynecological Conditions",
+    excerpt: "A comprehensive guide to women's health issues and how we provide personalized treatment solutions.",
     image: "/images/prenatal-visit.jpg",
     date: "Mar 10, 2026",
-    author: "Dr. Sarah Johnson",
-    category: "Pregnancy Care",
+    author: "",
+    category: "Gynecology",
   },
   {
     title: "The Benefits of GLP-1 for Medical Weight Loss",
     excerpt: "How modern medications are revolutionizing weight management under medical supervision.",
     image: "/images/weight-loss-medical.jpg",
     date: "Mar 5, 2026",
-    author: "Medical Director",
+    author: "",
     category: "Weight Loss",
   },
 ]

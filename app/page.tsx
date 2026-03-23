@@ -1,5 +1,5 @@
 import { Hero } from "@/sections/Hero";
-import { FreePregnancyTest } from "@/sections/FreePregnancyTest";
+import { ComprehensiveWomensCare } from "@/sections/ComprehensiveWomensCare";
 import { Services } from "@/sections/Services";
 import { WeightLossTeaser } from "@/sections/WeightLossTeaser";
 import { WhyChooseUs } from "@/sections/WhyChooseUs";
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <FreePregnancyTest />
+      <ComprehensiveWomensCare />
       <Services />
       <WeightLossTeaser />
       <WhyChooseUs />

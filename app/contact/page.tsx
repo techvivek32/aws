@@ -106,21 +106,8 @@ export default function ContactPage() {
                     required
                     className="mt-1 h-5 w-5 rounded border-primary/20 text-teal focus:ring-teal cursor-pointer"
                   />
-                  <label htmlFor="sms-consent-contact" className="text-base text-teal-dark leading-relaxed cursor-pointer font-medium flex items-center gap-2">
-                    I agree to receive SMS communication
-                    <div className="relative group">
-                      <div className="h-5 w-5 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold cursor-help">
-                        i
-                      </div>
-                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block w-80 bg-teal-dark text-white text-sm p-4 rounded-xl shadow-2xl z-50">
-                        <p className="leading-relaxed">
-                          By contacting +1 (602) 430-0940, you consent to receive SMS messages from Arizona Women Specialists regarding services and promotions. Message & data rates may apply. Reply STOP to opt out.
-                        </p>
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1">
-                          <div className="border-8 border-transparent border-t-teal-dark"></div>
-                        </div>
-                      </div>
-                    </div>
+                  <label htmlFor="sms-consent-contact" className="text-base text-teal-dark leading-relaxed cursor-pointer font-medium">
+                    I agree to receive SMS communication (Msg & data rates may apply. Reply STOP to opt out.)
                   </label>
                 </div>
                 

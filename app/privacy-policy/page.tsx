@@ -156,6 +156,21 @@ export default function PrivacyPolicyPage() {
             </ul>
           </section>
 
+          <section id="sms-communication">
+            <h2 className="text-2xl font-bold mb-4">SMS Communication</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              If you provide your phone number, you may receive SMS messages related to appointments, services, and promotional offers. You can opt out at any time by replying STOP.
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+              <li>By providing your phone number and consenting, you agree to receive SMS messages from Arizona Women Specialists</li>
+              <li>Messages may include appointment reminders, service updates, and promotional offers</li>
+              <li>Message and data rates may apply based on your mobile carrier plan</li>
+              <li>You can opt out at any time by replying STOP to any message</li>
+              <li>Reply HELP for assistance or contact us at +1 (602) 430-0940</li>
+              <li>We do not share your phone number with third parties for marketing purposes</li>
+            </ul>
+          </section>
+
           <section>
             <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
             <div className="bg-secondary/50 p-6 rounded-lg">
@@ -168,6 +183,7 @@ export default function PrivacyPolicyPage() {
                 <p>Phoenix Office: 4700 N 51st Ave Suite 5, Phoenix, AZ 85031</p>
                 <p>Glendale Office: 18699 N 67th Ave Suite 320, Glendale, AZ 85308</p>
                 <p>Phone: <a href="tel:6238467597" className="text-primary hover:underline">(623) 846-7597</a></p>
+                <p>SMS: <a href="tel:+16024300940" className="text-primary hover:underline">+1 (602) 430-0940</a></p>
                 <p>Email: <a href="mailto:info@arizonawomenspecialists.com" className="text-primary hover:underline">info@arizonawomenspecialists.com</a></p>
               </div>
               <p className="text-muted-foreground leading-relaxed mt-4">

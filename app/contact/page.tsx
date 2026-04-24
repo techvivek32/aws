@@ -99,9 +99,34 @@ export default function ContactPage() {
                   <Textarea placeholder="Tell us more about your needs..." className="min-h-[150px] py-6 px-8 rounded-[2rem] text-lg border-primary/10 focus:ring-teal medical-shadow resize-none" />
                 </div>
                 
+                <div className="flex items-start gap-4 p-6 bg-primary/5 rounded-2xl border border-primary/10">
+                  <input 
+                    type="checkbox" 
+                    id="sms-consent-contact"
+                    required
+                    className="mt-1 h-5 w-5 rounded border-primary/20 text-teal focus:ring-teal cursor-pointer"
+                  />
+                  <label htmlFor="sms-consent-contact" className="text-base text-teal-dark leading-relaxed cursor-pointer font-medium flex items-center gap-2">
+                    I agree to receive SMS communication
+                    <div className="relative group">
+                      <div className="h-5 w-5 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold cursor-help">
+                        i
+                      </div>
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block w-80 bg-teal-dark text-white text-sm p-4 rounded-xl shadow-2xl z-50">
+                        <p className="leading-relaxed">
+                          By contacting +1 (602) 430-0940, you consent to receive SMS messages from Arizona Women Specialists regarding services and promotions. Message & data rates may apply. Reply STOP to opt out.
+                        </p>
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1">
+                          <div className="border-8 border-transparent border-t-teal-dark"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                
                 <div className="pt-4">
                   <Button className="w-full bg-teal hover:bg-teal-dark rounded-full py-10 text-2xl font-bold shadow-xl shadow-teal/20 group">
-                    Send Message
+                    Confirm My Appointment
                     <Send className="ml-3 h-6 w-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </Button>
                 </div>

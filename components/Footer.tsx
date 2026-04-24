@@ -92,7 +92,10 @@ export function Footer() {
                   </div>
                   <div className="flex items-center gap-3 text-sm text-teal-dark/70">
                     <Phone className="h-4 w-4 shrink-0 text-teal" />
-                    <a href={`tel:${loc.phone.replace(/\D/g,'')}`}>{loc.phone}</a>
+                    <div className="flex flex-col gap-1">
+                      <a href="tel:6238467597">(623) 846-7597</a>
+                      <a href="tel:+16024300940">+1 (602) 430-0940</a>
+                    </div>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-teal-dark/70">
                     <Calendar className="h-4 w-4 shrink-0 text-teal" />

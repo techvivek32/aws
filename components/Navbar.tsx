@@ -116,11 +116,20 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-6">
-          <div className="hidden lg:flex items-center gap-2 text-foreground font-bold text-lg whitespace-nowrap">
-            <Phone className="h-5 w-5 text-teal" />
-            <a href={`tel:${phone.replace(/\D/g, '')}`} className="hover:text-primary transition-colors">
-              {phone}
-            </a>
+          <div className="hidden lg:flex items-center gap-6">
+            <div className="flex items-center gap-2 text-foreground font-bold text-base whitespace-nowrap">
+              <Phone className="h-5 w-5 text-teal" />
+              <a href="tel:6238467597" className="hover:text-primary transition-colors">
+                (623) 846-7597
+              </a>
+            </div>
+            <div className="h-6 w-px bg-border"></div>
+            <div className="flex items-center gap-2 text-foreground font-bold text-base whitespace-nowrap">
+              <Phone className="h-5 w-5 text-teal" />
+              <a href="tel:+16024300940" className="hover:text-primary transition-colors">
+                (602) 430-0940
+              </a>
+            </div>
           </div>
           <Button className="hidden sm:flex bg-teal hover:bg-teal-dark rounded-full px-8 py-6 text-lg font-bold shadow-lg shadow-teal/20" asChild>
             <a href="tel:6238467597">Book Now</a>
@@ -159,7 +168,11 @@ export function Navbar() {
           <div className="pt-6 border-t border-border flex flex-col gap-4">
             <div className="flex items-center gap-3 text-lg font-bold text-teal-dark">
               <Phone className="h-6 w-6 text-teal" />
-              <a href={`tel:${phone.replace(/\D/g, '')}`}>{phone}</a>
+              <a href="tel:6238467597">(623) 846-7597</a>
+            </div>
+            <div className="flex items-center gap-3 text-base font-bold text-teal-dark">
+              <Phone className="h-5 w-5 text-teal" />
+              <a href="tel:+16024300940">+1 (602) 430-0940</a>
             </div>
             <Button className="w-full bg-teal rounded-full py-7 text-xl font-bold" asChild onClick={() => setIsOpen(false)}>
               <a href="tel:6238467597">Book Now</a>

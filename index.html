@@ -26,12 +26,12 @@
 
   /* ============ BASE ============ */
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth; overflow-x:hidden}
   body{margin:0; background:var(--ground); color:var(--ink); font-family:var(--font-body);
        font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased; overflow-x:hidden}
   h1,h2,h3{font-family:var(--font-display); font-weight:600; line-height:1.12; text-wrap:balance; margin:0}
   p{margin:0}
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(18px,4vw,40px)}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(15px,4vw,40px)}
   .eyebrow{font-size:.74rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--brand)}
   .ico{width:1.15em; height:1.15em; flex:none; stroke:currentColor; stroke-width:1.7; fill:none;
        stroke-linecap:round; stroke-linejoin:round; vertical-align:-.16em}
@@ -259,6 +259,21 @@
             justify-content:space-between; gap:.7rem; align-items:center; font-size:.85rem; color:var(--ink-soft)}
   .foot-bar a{color:var(--ink-soft); text-decoration:none} .foot-bar a:hover{color:var(--brand)}
 
+  @media (max-width:560px){
+    .brand img{height:38px}
+    .brand-mark{width:36px; height:36px}
+    .brand-mark svg{width:19px; height:19px}
+    .brand-text b{font-size:.88rem; white-space:normal; line-height:1.05}
+    .brand-text small{display:none}
+    .nav{gap:.5rem; padding:.45rem 0}
+    .nav-actions{gap:.4rem}
+    header .btn--sm{padding:.5em .7em; font-size:.8rem}
+    .hamburger{width:40px; height:40px}
+  }
+  @media (max-width:480px){
+    .cta-row{flex-direction:column; align-items:stretch}
+    .cta-row .btn{width:100%; justify-content:center}
+  }
   @media(prefers-reduced-motion:reduce){ *{animation:none !important; transition:none !important} html{scroll-behavior:auto} }
 </style>
 <!-- ANALYTICS: paste your Meta Pixel / Google Ads / GA4 tags here (before </head>) -->
